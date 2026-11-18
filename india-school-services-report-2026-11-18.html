@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India K-12 EdTech Market Report 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #1e3a8a;
+            --secondary-blue: #3b82f6;
+            --accent-green: #10b981;
+            --accent-orange: #f97316;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --success: #059669;
+            --warning: #d97706;
+            --danger: #dc2626;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-dark: #f3f4f6;
+                --text-light: #d1d5db;
+                --bg-light: #111827;
+                --bg-white: #1f2937;
+                --border-color: #374151;
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-light);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 15px;
+        }
+
+        .report-meta {
+            display: flex;
+            gap: 30px;
+            margin-top: 20px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        .nav-tab {
+            padding: 12px 24px;
+            background: var(--bg-white);
+            border: 2px solid var(--border-color);
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            color: var(--text-dark);
+        }
+
+        .nav-tab:hover {
+            background: var(--bg-light);
+            border-color: var(--secondary-blue);
+        }
+
+        .nav-tab.active {
+            background: var(--secondary-blue);
+            color: white;
+            border-color: var(--secondary-blue);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Section Styling */
+        section {
+            background: var(--bg-white);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--secondary-blue);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--accent-green);
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        /* Key Metric Cards */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, var(--secondary-blue) 0%, #3b82f6 100%);
+            padding: 25px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .metric-card.orange {
+            background: linear-gradient(135deg, var(--accent-orange) 0%, #fb923c 100%);
+        }
+
+        .metric-card.green {
+            background: linear-gradient(135deg, var(--accent-green) 0%, #34d399 100%);
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .metric-label {
+            font-size: 0.95rem;
+            opacity: 0.95;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        thead {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        th {
+            padding: 15px 12px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        tbody tr:hover {
+            background: var(--bg-light);
+        }
+
+        tbody tr:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        /* Lists and Bullets */
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--text-light);
+        }
+
+        strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        /* Chart Container */
+        .chart-container {
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+        }
+
+        .chart {
+            background: var(--bg-white);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Competitive Matrix */
+        .matrix-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .matrix {
+            min-width: 100%;
+            border-collapse: collapse;
+        }
+
+        .matrix td, .matrix th {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+        }
+
+        .tier-1 { background: rgba(59, 130, 246, 0.1); font-weight: 600; }
+        .tier-2 { background: rgba(16, 185, 129, 0.1); }
+        .tier-3 { background: rgba(249, 115, 22, 0.1); }
+
+        /* Callout Boxes */
+        .callout {
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid;
+        }
+
+        .callout.info {
+            background: rgba(59, 130, 246, 0.1);
+            border-left-color: var(--secondary-blue);
+        }
+
+        .callout.success {
+            background: rgba(16, 185, 129, 0.1);
+            border-left-color: var(--accent-green);
+        }
+
+        .callout.warning {
+            background: rgba(249, 115, 22, 0.1);
+            border-left-color: var(--accent-orange);
+        }
+
+        .callout.danger {
+            background: rgba(220, 38, 38, 0.1);
+            border-left-color: var(--danger);
+        }
+
+        .callout strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* Pricing Comparison */
+        .pricing-tier {
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            background: var(--bg-light);
+        }
+
+        .pricing-tier.featured {
+            border-color: var(--secondary-blue);
+            background: rgba(59, 130, 246, 0.05);
+            transform: scale(1.02);
+        }
+
+        .pricing-tier h4 {
+            color: var(--secondary-blue);
+            margin-bottom: 15px;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--secondary-blue);
+        }
+
+        .timeline-item {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--secondary-blue);
+            border: 2px solid var(--bg-white);
+        }
+
+        .timeline-item h4 {
+            margin-bottom: 8px;
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .badge.primary {
+            background: var(--secondary-blue);
+            color: white;
+        }
+
+        .badge.success {
+            background: var(--accent-green);
+            color: white;
+        }
+
+        .badge.warning {
+            background: var(--accent-orange);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-blue);
+            color: white;
+            padding: 30px 20px;
+            margin-top: 50px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .chart-container {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-tabs {
+                flex-direction: column;
+            }
+
+            .nav-tab {
+                width: 100%;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th, td {
+                padding: 10px 8px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            section {
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid var(--border-color);
+            }
+
+            .nav-tabs {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>India K-12 EdTech Market Analysis</h1>
+            <p>Comprehensive Market Assessment & Competitive Landscape</p>
+            <div class="report-meta">
+                <span>Report Date: November 18, 2026</span>
+                <span>Market Focus: Private K-12 Schools</span>
+                <span>Geographic Scope: India (Tier-1, 2, 3 Cities)</span>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <div class="nav-tabs">
+            <div class="nav-tab active" onclick="switchTab(event, 'executive')">Executive Summary</div>
+            <div class="nav-tab" onclick="switchTab(event, 'market')">Market Overview</div>
+            <div class="nav-tab" onclick="switchTab(event, 'competitive')">Competitive Landscape</div>
+            <div class="nav-tab" onclick="switchTab(event, 'services')">Services & Pricing</div>
+            <div class="nav-tab" onclick="switchTab(event, 'sentiment')">Customer Sentiment</div>
+            <div class="nav-tab" onclick="switchTab(event, 'strategy')">Market Entry Strategy</div>
+            <div class="nav-tab" onclick="switchTab(event, 'roadmap')">12-Month Roadmap</div>
+            <div class="nav-tab" onclick="switchTab(event, 'actions')">Next Steps</div>
+        </div>
+
+        <!-- SECTION 1: Executive Summary -->
+        <div id="executive" class="tab-content active">
+            <section>
+                <h2>Executive Summary</h2>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">$7.5B-$8.9B</div>
+                        <div class="metric-label">2025 Market Size</div>
+                    </div>
+                    <div class="metric-card orange">
+                        <div class="metric-value">$19B-$29B</div>
+                        <div class="metric-label">2030 Projected Market</div>
+                    </div>
+                    <div class="metric-card green">
+                        <div class="metric-value">15-23%</div>
+                        <div class="metric-label">CAGR (2025-2030)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">1.5M</div>
+                        <div class="metric-label">Total K-12 Schools</div>
+                    </div>
+                </div>
+
+                <h3>Top 3 Key Findings</h3>
+                <div class="callout success">
+                    <strong>1. Market Consolidation Accelerating</strong>
+                    <p>The Indian edtech sector has entered a mature phase with M&A activity replacing new capital raises. The 2025 funding downturn ($249M, down 56% YoY from $572M in 2024) represents the lowest funding year since 2017. Market consolidation is reshaping the competitive landscape, with valuations being reset dramatically (Unacademy down from $3.5B to <$500M).</p>
+                </div>
+
+                <div class="callout success">
+                    <strong>2. Tier-2/3 Cities: The Growth Frontier</strong>
+                    <p>While Tier-1 metros are saturated, Tier-2 and Tier-3 cities represent the highest growth potential. These markets show 25-30% YoY growth in interactive classroom hardware adoption, contain ~90% of India's schools, and remain <10% penetrated by organized edtech solutions. This underserved segment requires hybrid models with local language support and offline-first architecture.</p>
+                </div>
+
+                <div class="callout success">
+                    <strong>3. Hybrid Models Winning vs. Pure-Play</strong>
+                    <p>Leading competitors (LEAD School, Extramarks, Tata ClassEdge) are validating hybrid delivery models combining on-ground services with digital platforms. Pure online and pure offline models are increasingly replaced by blended online-offline delivery, with physical presence becoming critical for trust and adoption in tier-2/3 markets.</p>
+                </div>
+
+                <h3>Top 3 Market Opportunities</h3>
+                <div class="callout info">
+                    <strong>1. Mid-Market Integration Gap (INR 1-2 Lakh/School)</strong>
+                    <p>Solutions cluster at extremes: high-end bundled packages (INR 2-5 lakh+) and low-cost SaaS (INR 49-500/student/year with minimal support). A gap exists for integrated curriculum + LMS + assessments + training at mid-market pricing with structured rollout and local language support.</p>
+                </div>
+
+                <div class="callout info">
+                    <strong>2. Tier-2/3 Affordability & Vernacular Content</strong>
+                    <p>Addressable market: 50,000-80,000 schools have dedicated edtech budgets. Tier-2/3 schools prioritize language and infrastructure over price. Opportunity for vendors offering Hindi/regional language support, offline-first architecture, and local implementation teams at 40-50% lower cost than metro-focused competitors.</p>
+                </div>
+
+                <div class="callout info">
+                    <strong>3. Reputation & Transparency Differentiation</strong>
+                    <p>Market suffers from critical trust gap: 90%+ of publicly available ratings are employee reviews, not customer testimonials. Opportunity to build transparent, third-party-verified review system and publish outcome data, creating competitive differentiation in a market starved for trust.</p>
+                </div>
+
+                <h3>Market Context</h3>
+                <ul>
+                    <li><strong>Market Composition:</strong> Broader K-12 education market is $103B (2025), with edtech representing 7-9% penetration</li>
+                    <li><strong>Student Population:</strong> 260 million across 1.5 million schools</li>
+                    <li><strong>Private School Penetration:</strong> 40% (~600,000 schools, 8.5 crore students)</li>
+                    <li><strong>Market Structure:</strong> Highly fragmented with 11 major players and many regional competitors</li>
+                    <li><strong>Key Driver:</strong> NEP 2020, government digitalization push, and rising incomes in tier-2/3 cities</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- SECTION 2: Market Overview -->
+        <div id="market" class="tab-content">
+            <section>
+                <h2>Market Overview</h2>
+
+                <h3>Market Size & Growth Trajectory</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Value</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>2025 Market Valuation</strong></td>
+                            <td>$7.5B–$8.9B</td>
+                            <td>EdTech and smart classrooms segment</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Projected 2030 Market</strong></td>
+                            <td>$19B–$29B</td>
+                            <td>5-year projection at 15-23% CAGR</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CAGR (2025-2030)</strong></td>
+                            <td>15–23%</td>
+                            <td>Depending on segment definition</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Broader K-12 Market</strong></td>
+                            <td>$103B (2025)</td>
+                            <td>EdTech represents 7-9% penetration</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total K-12 Schools</strong></td>
+                            <td>1.5 Million</td>
+                            <td>Including government and private</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Private Schools</strong></td>
+                            <td>~600,000 (40%)</td>
+                            <td>Primary target for edtech</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Key Market Segments</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Segment</th>
+                            <th>Description</th>
+                            <th>Market Leaders</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>School SaaS & Management</strong></td>
+                            <td>ERP, attendance, learning analytics</td>
+                            <td>Next Education, Tata ClassEdge</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Digital Learning Content</strong></td>
+                            <td>Curriculum-aligned, interactive, assessment</td>
+                            <td>S Chand, Navneet, Extramarks</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AI-Powered Tutoring</strong></td>
+                            <td>Personalized learning, emerging leader</td>
+                            <td>LEAD School (Ms. Curie), Extramarks</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hybrid Classroom Solutions</strong></td>
+                            <td>Blended online-offline delivery</td>
+                            <td>LEAD School, Tata ClassEdge</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Preschool/Early Learning</strong></td>
+                            <td>Ages 2-6, franchise-based</td>
+                            <td>EuroKids, Bachpan</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Geographic Opportunity Pyramid</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tier</th>
+                            <th>Characteristics</th>
+                            <th>Penetration</th>
+                            <th>Growth Potential</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Tier 1 (Metros)</strong></td>
+                            <td>Early adopters, dense competition, saturated</td>
+                            <td>60%+</td>
+                            <td>Low (Mature market)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tier 2 (Secondary Cities)</strong></td>
+                            <td>Rapid growth, rising incomes, digital literacy increasing</td>
+                            <td>22%</td>
+                            <td><span class="badge success">HIGHEST</span> (25-30% YoY)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tier 3 & Rural</strong></td>
+                            <td>Underserved, significant TAM (~90% of schools), offline-first models needed</td>
+                            <td><5%</td>
+                            <td>High (20%+ YoY)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Government Schools</strong></td>
+                            <td>Major underpenetrated segment, increasingly targeted</td>
+                            <td>5-10%</td>
+                            <td>High (NEP 2020 tailwind)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Market Dynamics & Drivers</h3>
+                <ul>
+                    <li><strong>NEP 2020 Mandate:</strong> National Education Policy 2020 driving digitalization across schools</li>
+                    <li><strong>Rising Incomes:</strong> Middle-class expansion in tier-2/3 cities increasing willingness to spend on education tech</li>
+                    <li><strong>Connectivity Improvement:</strong> 4G/5G penetration enabling digital delivery in previously underserved areas</li>
+                    <li><strong>Board Exam Pressure:</strong> Schools prioritizing competitive advantage in CBSE/ICSE/state board exams</li>
+                    <li><strong>CSR Program Expansion:</strong> Government and corporate partnerships creating funding channels for adoption</li>
+                    <li><strong>Post-Pandemic Digital Shift:</strong> Schools have demonstrated readiness for hybrid delivery models</li>
+                </ul>
+
+                <h3>Funding Environment Crisis (2025)</h3>
+                <div class="callout warning">
+                    <strong>Sector Funding Downturn:</strong>
+                    <ul>
+                        <li>2025 Funding: Only $249M (down 56% YoY from $572M in 2024)</li>
+                        <li>8-year Low: Lowest funding year since 2017</li>
+                        <li>Investor Mandate Shift: From growth-at-all-costs to unit economics and profitability</li>
+                        <li>Valuation Correction: Dramatic resets across entire sector (Unacademy: $3.5B → <$500M)</li>
+                        <li>Market Signal: M&A replacing new funding rounds; consolidation accelerating</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- SECTION 3: Competitive Landscape -->
+        <div id="competitive" class="tab-content">
+            <section>
+                <h2>Competitive Landscape</h2>
+
+                <h3>Tier 1: Market Leaders & Unicorns</h3>
+                <table class="matrix">
+                    <thead>
+                        <tr class="tier-1">
+                            <th>Company</th>
+                            <th>Model</th>
+                            <th>Scale</th>
+                            <th>Key Products</th>
+                            <th>Positioning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tier-1">
+                            <td><strong>LEAD School</strong></td>
+                            <td>Hybrid K-12</td>
+                            <td>1,000+ schools<br/>400K+ students</td>
+                            <td>AI tutor (Ms. Curie), school platform, teacher training</td>
+                            <td>Premium tier-1/2 urban; AI-first strategy</td>
+                        </tr>
+                        <tr class="tier-1">
+                            <td><strong>Extramarks</strong></td>
+                            <td>School SaaS + Learning</td>
+                            <td>5,000+ schools<br/>1M+ students</td>
+                            <td>School ERP, Smart Classes, Extra Intelligence AI, Footsteps K-5</td>
+                            <td>Comprehensive school ecosystem</td>
+                        </tr>
+                        <tr class="tier-1">
+                            <td><strong>Tata ClassEdge</strong></td>
+                            <td>Content + Hardware + Training</td>
+                            <td>1,700+ schools<br/>70K+ teachers</td>
+                            <td>E-learning, smart classroom hardware, principal training</td>
+                            <td>Institutional trust (Tata group backing)</td>
+                        </tr>
+                        <tr class="tier-1">
+                            <td><strong>Next Education</strong></td>
+                            <td>Modular SaaS</td>
+                            <td><strong>18,000+ schools</strong><br/>12M students (Largest reach)</td>
+                            <td>Content library, ERP, LMS, analytics</td>
+                            <td>Largest direct reach; M&A target (Apr 2025)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Tier 2: Strong Regional & Specialized Players</h3>
+                <table class="matrix">
+                    <thead>
+                        <tr class="tier-2">
+                            <th>Company</th>
+                            <th>Model</th>
+                            <th>Scale</th>
+                            <th>Positioning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tier-2">
+                            <td><strong>iDream Education (iPrep)</strong></td>
+                            <td>Offline-first digital</td>
+                            <td>25,000+ classrooms</td>
+                            <td><span class="badge success">Tier-2/3 Focus</span> Government & rural schools; offline strength</td>
+                        </tr>
+                        <tr class="tier-2">
+                            <td><strong>Navneet Education</strong></td>
+                            <td>Publisher + Digital</td>
+                            <td>10M+ students reach<br/>40K+ schools</td>
+                            <td>CBSE authority; broad distribution network</td>
+                        </tr>
+                        <tr class="tier-2">
+                            <td><strong>S Chand/Mylestone</strong></td>
+                            <td>Curriculum + Digital</td>
+                            <td>150K+ Mylestone users</td>
+                            <td>NCF 2023-aligned; author partnerships</td>
+                        </tr>
+                        <tr class="tier-2">
+                            <td><strong>XSEED Education</strong></td>
+                            <td>Premium Pedagogy</td>
+                            <td>2M+ students reached</td>
+                            <td>Inquiry-based curriculum; premium positioning</td>
+                        </tr>
+                        <tr class="tier-2">
+                            <td><strong>Dreamtime Learning</strong></td>
+                            <td>Microschools + Online</td>
+                            <td>2,000+ online students</td>
+                            <td>Technology-first; tier-2 growth focus</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Preschool/Early Learning Segment</h3>
+                <table class="matrix">
+                    <thead>
+                        <tr class="tier-3">
+                            <th>Company</th>
+                            <th>Model</th>
+                            <th>Scale</th>
+                            <th>Positioning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tier-3">
+                            <td><strong>EuroKids</strong></td>
+                            <td>Franchise chain</td>
+                            <td>1,000+ centers in 350+ cities</td>
+                            <td>Largest organized preschool; franchise expansion</td>
+                        </tr>
+                        <tr class="tier-3">
+                            <td><strong>Bachpan</strong></td>
+                            <td>Franchise playschools</td>
+                            <td>Significant tier-2 presence</td>
+                            <td>NCF-FS 2022 alignment; newer curriculum focus</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Recent Strategic Moves (2025-2026)</h3>
+
+                <h4>Major Product Launches</h4>
+                <ul>
+                    <li><strong>LEAD School - Ms. Curie AI Tutor (April 2026):</strong> AI-powered 1:1 personalized learning for classrooms. Planned rollout to 1,000+ schools with 400K+ students in 12-18 months</li>
+                    <li><strong>Extramarks - Extra Intelligence (July 2025):</strong> AI-powered education suite integrating across school ecosystem (classroom, assessments, homework). Rolling out across partner network with Footsteps K-5 book series</li>
+                    <li><strong>Tata ClassEdge - EdTech Experience Centres (Jan 2026):</strong> Partnership with Etome Works to establish physical hubs enabling school leaders to evaluate solutions firsthand</li>
+                </ul>
+
+                <h4>Major Partnerships & Ecosystem</h4>
+                <ul>
+                    <li><strong>ShikshaNext Initiative (Feb 2026):</strong> Rs 170 crore multi-year initiative by Reliance Foundation & Michael & Susan Dell Foundation focusing on EdTech and AI for underserved children</li>
+                    <li><strong>Google AI Partnerships (2026):</strong> Partnerships with Indian state governments and UNICEF for AI literacy programs</li>
+                    <li><strong>ABP Education + YoLearn AI (Sept 2026):</strong> ABP invested in YoLearn AI, providing critical go-to-market distribution via school network</li>
+                    <li><strong>Schoolnet Geneo AI (2026):</strong> Reach of 100,000 schools with 25M+ learners through AI-powered analytics</li>
+                </ul>
+
+                <h3>Market Consolidation Activity</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Deal</th>
+                            <th>Details</th>
+                            <th>Market Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>upGrad Acquires Unacademy</strong></td>
+                            <td>~₹2,055 crore (~$250M), all-stock deal (2025-26)</td>
+                            <td>Signals end of unicorn-at-all-costs era; valuations reset dramatically</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Next Education M&A Discussions</strong></td>
+                            <td>Received M&A offer (Apr 2025); consolidation pressure evident</td>
+                            <td>Largest direct reach (18,000+ schools) attractive to consolidators</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Byju's Distressed Situation</strong></td>
+                            <td>Entered insolvency (Sept 2024); asset sales ongoing (Manipal acquiring)</td>
+                            <td>Triggered broader valuation reset across sector</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="callout info">
+                    <strong>Key Insight on Competitive Dynamics:</strong>
+                    94+ acquisitions in Indian edtech since 2021 (Tracxn). Movement toward integrated ecosystems (ERP + learning + analytics) with smaller players under pressure to merge or raise at significant markdowns. Financially strong players acquiring distressed assets' technology and customer bases.
+                </div>
+            </section>
+        </div>
+
+        <!-- SECTION 4: Services & Pricing -->
+        <div id="services" class="tab-content">
+            <section>
+                <h2>Services & Pricing Analysis</h2>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">INR 500-3,000</div>
+                        <div class="metric-label">Target Price Range /Student/Year</div>
+                    </div>
+                    <div class="metric-card orange">
+                        <div class="metric-value">INR 1,400-4,000</div>
+                        <div class="metric-label">Bundled Solutions Range</div>
+                    </div>
+                    <div class="metric-card green">
+                        <div class="metric-value">INR 50K-1L</div>
+                        <div class="metric-label">Implementation Fees (One-time)</div>
+                    </div>
+                </div>
+
+                <h3>Pricing Models Overview</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Range</th>
+                            <th>Primary Users</th>
+                            <th>Typical Structure</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Per-Student Annual Fee</strong></td>
+                            <td>INR 400-4,000</td>
+                            <td>LEAD School, S Chand/Mylestone, Next Education</td>
+                            <td>Base fee + subject add-ons + implementation charges</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Monthly Subscription</strong></td>
+                            <td>INR 1,820-3,640/month</td>
+                            <td>Extramarks (consumer), iPrep app</td>
+                            <td>Tiered by grade/subject; 6-9 month minimum</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Custom/Negotiated</strong></td>
+                            <td>Varies widely</td>
+                            <td>LEAD, Next Education, Tata ClassEdge, XSEED</td>
+                            <td>School size, board, tech scope based</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Modular/À la Carte</strong></td>
+                            <td>Flexible</td>
+                            <td>iDream/iPrep, Navneet, Dreamtime</td>
+                            <td>Pick content + LMS + training + hardware as needed</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Competitor Pricing Benchmarks</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Competitor</th>
+                            <th>Pricing Model</th>
+                            <th>Per-Student Cost (Annual)</th>
+                            <th>Additional Fees</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>S Chand/Mylestone</strong></td>
+                            <td>Per-student + implementation</td>
+                            <td>INR 1,400-4,000</td>
+                            <td>INR 1 lakh implementation & training</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Extramarks</strong></td>
+                            <td>Subscription (consumer)</td>
+                            <td>INR 21,840-43,680/year (₹1,820-3,640/month)</td>
+                            <td>INR 1,000 cancellation fee</td>
+                        </tr>
+                        <tr>
+                            <td><strong>iDream/iPrep</strong></td>
+                            <td>Flexible models</td>
+                            <td>INR 200-500</td>
+                            <td>Per-tablet/license varies</td>
+                        </tr>
+                        <tr>
+                            <td><strong>LEAD School</strong></td>
+                            <td>Per-student annual</td>
+                            <td>INR 400-1,000 (estimate)</td>
+                            <td>Custom quote</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Next Education</strong></td>
+                            <td>Per-user/school-based</td>
+                            <td>INR 500-1,000</td>
+                            <td>Custom quote</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tata ClassEdge</strong></td>
+                            <td>Customized</td>
+                            <td>Not publicly disclosed</td>
+                            <td>Sales consultation</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Service Packaging & Tiers</h3>
+
+                <div class="pricing-tier featured">
+                    <h4>Tier 1: Integrated Full-Stack Solutions</h4>
+                    <p><strong>Competitors:</strong> LEAD School, Next Education, Dreamtime Learning</p>
+                    <ul>
+                        <li>Include: Curriculum + Teacher Training + Tech Platform + Assessments</li>
+                        <li>Target: Private affordable schools (₹30K-80K annual fees)</li>
+                        <li>Pricing: School-level budgets ₹2-10 lakh total</li>
+                        <li>Support: Implementation, ongoing PD, monitoring dashboards</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-tier">
+                    <h4>Tier 2: Curriculum + Digital Bundle</h4>
+                    <p><strong>Competitors:</strong> S Chand/Mylestone, XSEED Education, Navneet Education</p>
+                    <ul>
+                        <li>Include: Textbooks/workbooks + digital content + teacher guides + assessment tools</li>
+                        <li>Target: Traditional private schools transitioning to hybrid</li>
+                        <li>Pricing: Per-student + one-time fees for training/setup</li>
+                        <li>Support: Limited ongoing training (often school-led)</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-tier">
+                    <h4>Tier 3: Technology/Content-First</h4>
+                    <p><strong>Competitors:</strong> Tata ClassEdge, Extramarks, iDream/iPrep</p>
+                    <ul>
+                        <li>Include: LMS/platform + digital content + assessments</li>
+                        <li>Target: Tech-forward schools, tutoring centers, direct-to-consumer</li>
+                        <li>Pricing: Per-user, per-seat, or subscription model</li>
+                        <li>Support: Self-service with optional add-on training</li>
+                    </ul>
+                </div>
+
+                <h3>Feature Comparison Matrix</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>LEAD</th>
+                            <th>Next</th>
+                            <th>XSEED</th>
+                            <th>Tata</th>
+                            <th>iDream</th>
+                            <th>Extramarks</th>
+                            <th>S Chand</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Curriculum Customization</strong></td>
+                            <td><span class="badge success">High</span></td>
+                            <td><span class="badge success">High</span></td>
+                            <td>Medium</td>
+                            <td>Low</td>
+                            <td>Medium</td>
+                            <td>Low</td>
+                            <td><span class="badge success">High</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Teacher PD (Hours/Year)</strong></td>
+                            <td>40-60+</td>
+                            <td>30-40</td>
+                            <td>50+</td>
+                            <td>20-30</td>
+                            <td>10-20</td>
+                            <td>5-10</td>
+                            <td>20-30</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Assessment Tools</strong></td>
+                            <td><span class="badge success">Diagnostic + Formative + Summative</span></td>
+                            <td>Diagnostic + Summative</td>
+                            <td>Formative + Diagnostic</td>
+                            <td>Formative + Summative</td>
+                            <td>Formative + Practice</td>
+                            <td><span class="badge success">High focus on tests</span></td>
+                            <td>Diagnostic + Formative</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Teacher Dashboard</strong></td>
+                            <td><span class="badge primary">Yes</span></td>
+                            <td><span class="badge primary">Yes</span></td>
+                            <td>Limited</td>
+                            <td><span class="badge primary">Yes</span></td>
+                            <td><span class="badge primary">Yes</span></td>
+                            <td>Limited</td>
+                            <td>Partial</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Parent App</strong></td>
+                            <td><span class="badge primary">Yes</span></td>
+                            <td><span class="badge primary">Yes</span></td>
+                            <td>No</td>
+                            <td>Optional</td>
+                            <td><span class="badge primary">Yes</span></td>
+                            <td><span class="badge primary">Yes</span></td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Board Alignment</strong></td>
+                            <td>CBSE/ICSE/State</td>
+                            <td>CBSE/ICSE/State</td>
+                            <td>Custom</td>
+                            <td>Flexible</td>
+                            <td>CBSE/State</td>
+                            <td>CBSE-heavy</td>
+                            <td>CBSE/ICSE/State</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Adoption Drivers & Barriers</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Adoption Driver</th>
+                            <th>Importance</th>
+                            <th>Market Signal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Curriculum Alignment (CBSE/ICSE/State)</strong></td>
+                            <td><span class="badge warning">TOP PRIORITY</span></td>
+                            <td>Top buying criterion; non-aligned solutions face rejection</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Teacher Training Quality</strong></td>
+                            <td><span class="badge warning">CRITICAL</span></td>
+                            <td>Adoption risk factor; poor training leads to low usage rates</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tech Infrastructure Requirement</strong></td>
+                            <td>High</td>
+                            <td>Determines school readiness; connectivity issues in tier-2/3</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Assessment/Diagnostic Tools</strong></td>
+                            <td>High</td>
+                            <td>Growing value-add; schools want outcome tracking</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cost Flexibility</strong></td>
+                            <td>Medium</td>
+                            <td>Per-student vs. per-school models adapt to school budgets</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Implementation Timeline by Model</h3>
+                <ul>
+                    <li><strong>On-ground solutions:</strong> 2-3 months rollout (staff training required)</li>
+                    <li><strong>Hybrid solutions:</strong> 1-2 months (platform orientation faster than full PD)</li>
+                    <li><strong>Online-first:</strong> <1 month (self-service adoption, but adoption slower without support)</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- SECTION 5: Customer Sentiment & Reputation -->
+        <div id="sentiment" class="tab-content">
+            <section>
+                <h2>Customer Sentiment & Reputation Strategy</h2>
+
+                <h3>Competitor Ratings & Review Landscape</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Competitor</th>
+                            <th>Employee Rating</th>
+                            <th>Customer Rating</th>
+                            <th>Sample Size</th>
+                            <th>Key Gaps</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>LEAD School</strong></td>
+                            <td>3.3/5 (754 reviews)</td>
+                            <td>No independent reviews</td>
+                            <td>Minimal</td>
+                            <td>Market leader but lacks customer testimonials</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Extramarks</strong></td>
+                            <td>3.4/5 (1.9K reviews)</td>
+                            <td>3.2/5 (5 reviews)</td>
+                            <td>Very small</td>
+                            <td>Sparse customer reviews despite large scale</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Next Education</strong></td>
+                            <td>3.6/5 (796 reviews)</td>
+                            <td>3.5/5 (3 reviews, G2)</td>
+                            <td>Very small</td>
+                            <td>Strong employee sentiment; minimal school feedback</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tata ClassEdge</strong></td>
+                            <td>3.4/5 (256 reviews)</td>
+                            <td>4.4/5 (6 reviews, 2020-21)</td>
+                            <td>Very small, dated</td>
+                            <td>Highest rated but tiny, outdated sample</td>
+                        </tr>
+                        <tr>
+                            <td><strong>iDream Education</strong></td>
+                            <td>Not tracked</td>
+                            <td>3.5/5 (6 reviews, Trustpilot)</td>
+                            <td>Very small</td>
+                            <td>Quality consistency concerns; refund issues flagged</td>
+                        </tr>
+                        <tr>
+                            <td><strong>EuroKids/Bachpan</strong></td>
+                            <td>3.9/5 (406 reviews)</td>
+                            <td>4.8/5 (self-reported)</td>
+                            <td>Unverified</td>
+                            <td>Highest claimed rating but unverified and self-reported</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Top Positive Feedback Themes</h3>
+                <ul>
+                    <li><strong>Tata ClassEdge:</strong> Steady student improvement demonstrated; high-quality study materials</li>
+                    <li><strong>Extramarks:</strong> Comprehensive subject coverage</li>
+                    <li><strong>iPrep (iDream):</strong> Strong learning tool (5-star reviews)</li>
+                    <li><strong>Mylestone:</strong> Advanced teaching methodology; supports entire school ecosystem</li>
+                </ul>
+
+                <h3>Top Negative Feedback Themes (Critical)</h3>
+                <div class="callout danger">
+                    <strong>Refund & Cancellation Issues (Most Cited)</strong>
+                    <ul>
+                        <li>Trial period refunds delayed or denied</li>
+                        <li>Subscription cancellations not registered</li>
+                        <li>Difficult customer support access for cancellations</li>
+                        <li><strong>Market Impact:</strong> Affects perception even for high-quality products</li>
+                    </ul>
+                </div>
+
+                <div class="callout danger">
+                    <strong>Aggressive Sales Tactics</strong>
+                    <ul>
+                        <li>Over-promising learning outcomes</li>
+                        <li>High-pressure upsells during trials</li>
+                        <li>Switching costs created through data/training lock-in</li>
+                    </ul>
+                </div>
+
+                <div class="callout danger">
+                    <strong>Customer Support Responsiveness</strong>
+                    <ul>
+                        <li>Long response times to complaints (avg 2-3 months)</li>
+                        <li>Unanswered refund requests and unresolved issues</li>
+                        <li>Lack of company response to negative reviews (iPrep case study)</li>
+                        <li>No standardized complaints platform for schools</li>
+                    </ul>
+                </div>
+
+                <div class="callout danger">
+                    <strong>Product Quality Consistency</strong>
+                    <ul>
+                        <li>Outdated materials or platform (reported by employee reviews)</li>
+                        <li>Incorrect answers in study materials (iPrep 1-star review)</li>
+                        <li>Technical bugs (iOS app stability—Tata ClassEdge)</li>
+                        <li>Feature gaps in promised functionality</li>
+                    </ul>
+                </div>
+
+                <h3>Unmet Customer Needs by Segment</h3>
+
+                <h4>Infrastructure & Technology</h4>
+                <ul>
+                    <li>Platform Stability: Technical issues beyond content (app crashes, slow loading, feature bugs)</li>
+                    <li>Language Barriers: Tier-2/3 schools cite language as bigger blocker than price</li>
+                    <li>Offline Capability: Infrastructure gaps in lower-tier cities with limited connectivity</li>
+                    <li>System Integration: Schools struggle to integrate multiple tools into existing workflows</li>
+                </ul>
+
+                <h4>Business Model & Transparency</h4>
+                <ul>
+                    <li>Refund Clarity: 96% of customers surveyed want mandatory disclosure of refund policies</li>
+                    <li>Pricing Models: Confusion over hidden charges, subscription mechanics, upgrade paths</li>
+                    <li>Contract Terms: Schools report unclear implementation timelines and support SLAs</li>
+                    <li>ROI Measurement: Lack of transparent, comparable outcome metrics</li>
+                </ul>
+
+                <h4>Support & Onboarding</h4>
+                <ul>
+                    <li>Dedicated Account Management: Absent for small schools (<500 students)</li>
+                    <li>Implementation Support: High variability in onboarding quality</li>
+                    <li>Issue Resolution Speed: 2-3 month typical resolution for critical issues</li>
+                    <li>Continuity: Staff turnover at vendor side disrupts relationships</li>
+                </ul>
+
+                <h3>Critical Trust Gap Finding</h3>
+                <div class="callout warning">
+                    <strong>Key Market Insight:</strong>
+                    <p>Market suffers from <strong>critical trust gap:</strong> 90%+ of publicly available ratings are employee reviews (AmbitionBox), not customer testimonials. Competitors with strongest claimed ratings (EuroKids 4.8/5, Tata ClassEdge 4.4/5, Mylestone 4.4/5) rely on small samples or unverified data.</p>
+                    <p><strong>Strategic Opportunity:</strong> A competitor who builds transparent, third-party-verified customer reviews and publishes outcome data will immediately differentiate in a market starved for trust. Positioning: "The Only K-12 EdTech Company That Publishes Its Customer Reviews and Outcome Metrics."</p>
+                </div>
+
+                <h3>Recommended Reputation Strategy for Market Entrants</h3>
+
+                <h4>Positioning: "The Only Transparent, School-Endorsed K-12 EdTech for India's Diverse Schools"</h4>
+
+                <h4>Core Pillars:</h4>
+                <ol>
+                    <li><strong>Verified Reviews:</strong> All testimonials third-party verified (Trustpilot-style); publish raw review data</li>
+                    <li><strong>Outcome Transparency:</strong> Monthly published outcome audits by subject, board, school tier</li>
+                    <li><strong>Effortless Support:</strong> 48-hr response SLA on all support tickets; 30-day money-back guarantee</li>
+                    <li><strong>Regional Optimization:</strong> Launch in Hindi, Tamil, Telugu, Bengali; build offline-first version</li>
+                    <li><strong>Tier-Specific Design:</strong> Distinct product tiers for 50-student vs. 500-student schools; transparent pricing</li>
+                </ol>
+
+                <h4>Launch Strategy (12 Months):</h4>
+                <ul>
+                    <li><strong>Month 1:</strong> Partner with 20 Tier-2 schools for free pilot + testimonial rights</li>
+                    <li><strong>Month 2:</strong> Publish comparative review study: "Why India's Top Schools Switch"</li>
+                    <li><strong>Month 3:</strong> Launch Trustpilot presence; seed with verified customer reviews</li>
+                    <li><strong>Month 6:</strong> Announce board certifications (state education departments)</li>
+                    <li><strong>Year 1:</strong> Publish annual "Transparency Report" showing NPS by segment, resolution rates, outcome data</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- SECTION 6: Market Entry Strategy -->
+        <div id="strategy" class="tab-content">
+            <section>
+                <h2>Market Entry Strategy (Recommended)</h2>
+
+                <h3>Market Opportunity Assessment</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Value</th>
+                            <th>Implication</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Total Addressable Market</strong></td>
+                            <td>50,000-80,000 schools</td>
+                            <td>Schools with dedicated edtech budgets (narrow but growing)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Private School Enrollment Growth</strong></td>
+                            <td>+11.7M over 2 years</td>
+                            <td>Enrollment in private unaided schools growing faster than government</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CBSE Schools</strong></td>
+                            <td>32,941 schools<br/>27M students</td>
+                            <td>Primary target for curriculum alignment; lower complexity than state boards</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tier-2/3 Growth Rate</strong></td>
+                            <td>25-30% YoY</td>
+                            <td>Highest growth frontier; <10% penetrated by organized edtech</td>
+                        </tr>
+                        <tr>
+                            <td><strong>School Budget Range</strong></td>
+                            <td>INR 22,919-35,798<br/>per student/year</td>
+                            <td>EdTech budgets of INR 500-3,000/student/year fit within annual spending</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Critical Market Gaps to Exploit</h3>
+
+                <div class="callout success">
+                    <strong>Gap 1: Mid-Market Integration (INR 1-2 Lakh/School)</strong>
+                    <p>Solutions cluster at extremes: high-end (INR 2-5 lakh+) and low-cost SaaS (INR 49-500/student/year). Missing: Integrated curriculum + training + LMS + analytics at mid-market pricing with structured rollout.</p>
+                </div>
+
+                <div class="callout success">
+                    <strong>Gap 2: Training Execution (The #1 Barrier)</strong>
+                    <p>Teacher training is cited as the #1 implementation barrier. Vendors sell training; adoption failures traced to poor teacher adoption, not platform. Schools need on-site implementation support (90+ days), not 3-day training, plus continuous CPD.</p>
+                </div>
+
+                <div class="callout success">
+                    <strong>Gap 3: Tier-2/3 Specific Needs</strong>
+                    <p>Vernacular content (Hindi, regional languages), offline-first architecture, local implementation teams, and regional board alignment missing from national vendors. Tier-2/3 schools prioritize language and infrastructure over price.</p>
+                </div>
+
+                <div class="callout success">
+                    <strong>Gap 4: State Board Neglect</strong>
+                    <p>ICSE covers 2,500 schools; state boards cover 88% of enrollment. Vendors over-index on CBSE, missing 15-20% revenue opportunity in state board schools. Regional expansion opportunity.</p>
+                </div>
+
+                <div class="callout success">
+                    <strong>Gap 5: Transparency & Trust</strong>
+                    <p>No standardized complaints platform for schools. Opportunity to build trust through third-party verified reviews, published outcome data, transparent refund policies, and customer-centric support.</p>
+                </div>
+
+                <h3>Competitive Weaknesses to Exploit</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Competitor</th>
+                            <th>Weakness</th>
+                            <th>Your Differentiation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>LEAD School</strong></td>
+                            <td>High price (INR 2-5L+/school), implementation overhead</td>
+                            <td>Lower price point (40% less), teacher-first adoption strategy</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Next Education</strong></td>
+                            <td>No training/services, requires school technical capability</td>
+                            <td>Bundled services + content + training + on-site support</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Extramarks</strong></td>
+                            <td>Class cancellations, refund issues, B2C not B2B focus</td>
+                            <td>Reliable B2B support, transparent operations, 48-hr SLA</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tata ClassEdge</strong></td>
+                            <td>iOS app issues, limited peer reviews, weak school marketing</td>
+                            <td>Modern mobile-first architecture, school-focused positioning</td>
+                        </tr>
+                        <tr>
+                            <td><strong>XSEED Education</strong></td>
+                            <td>Limited market visibility, niche positioning, weak go-to-market</td>
+                            <td>Mass-market positioning in tier-2/3, local language support</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Recommended Positioning</h3>
+
+                <h4>Primary: "Digital Transformation Without the Risk"</h4>
+                <ul>
+                    <li>Service-first model: Implementation team embedded in school for 90 days (not 3-day training)</li>
+                    <li>Teacher success guarantee: If <70% adoption within 6 months, co-invest in additional training</li>
+                    <li>Multi-board support: Curriculum mappings for CBSE, ICSE, 8+ state boards</li>
+                    <li>Local language: Hindi, Gujarati, Marathi, Telugu medium support from day one</li>
+                </ul>
+
+                <h4>Secondary: "Built for Tier-2/3 Schools"</h4>
+                <ul>
+                    <li>Mobile-first LMS (works on 2G/3G, cached content for low bandwidth)</li>
+                    <li>Offline-first teacher tools (no internet dependency for core teaching)</li>
+                    <li>Vernacular school administration (forms, parent comms in local language)</li>
+                    <li>24/7 regional support in local language (not just English)</li>
+                </ul>
+
+                <h4>Tertiary: "Outcome-Driven Analytics"</h4>
+                <ul>
+                    <li>Focus on learning outcomes (exam performance correlation, learning gap identification)</li>
+                    <li>Compare school performance against similar schools (anonymized peer benchmarking)</li>
+                    <li>Automated intervention triggers (flag declining performance, alert to teacher)</li>
+                    <li>Prove ROI to principal: "Schools using our platform see 12-15% average improvement in board exam scores"</li>
+                </ul>
+
+                <h3>Go-to-Market Strategy</h3>
+
+                <h4>Primary Channel: Direct Sales (Years 1-2)</h4>
+                <ul>
+                    <li><strong>Target Profile:</strong> Principals of private schools in tier-2/3 cities, 500-1,500 students, CBSE-affiliated</li>
+                    <li><strong>Team:</strong> 10-person direct sales team targeting 2-3 adjacent geographies</li>
+                    <li><strong>Proof-of-Concept Model:</strong> 50-100 students, one class, 2 weeks free; measure teacher adoption</li>
+                    <li><strong>Close Rate Target:</strong> 25-30% (typical for school SaaS: 20-40%)</li>
+                </ul>
+
+                <h4>Secondary Channels: Distribution Partnerships (Year 1-2)</h4>
+                <ul>
+                    <li><strong>School Audit Firms:</strong> NABH, IAMAI; embed digital readiness assessment; 20-25% commission</li>
+                    <li><strong>Education Supply Dealers:</strong> 50,000+ nationwide; train to recommend; INR 2,000-5,000 per school</li>
+                    <li><strong>School Associations:</strong> CBSE principal associations; group buying discounts (10% for 10+ schools)</li>
+                    <li><strong>State Education Departments:</strong> Pilot with 5-10 schools per state; tie to NEP 2020</li>
+                </ul>
+
+                <h4>Partnerships (Year 2+):</h4>
+                <ul>
+                    <li>Parent-teacher communication platforms (Classdojo, WhatsApp business API)</li>
+                    <li>Assessment providers (Oswaal, S. Chand test papers)</li>
+                    <li>Teacher training academies for co-delivered CPD modules</li>
+                    <li>School financing firms for bundled offerings</li>
+                </ul>
+
+                <h3>Target Customer Segments</h3>
+
+                <div class="pricing-tier featured">
+                    <h4>Segment A: "Ambitious Growth" (40% of addressable market)</h4>
+                    <p><strong>Profile:</strong> Schools with 400-1,200 students in tier-2 cities (Indore, Nagpur, Bhopal, Coimbatore, Kolhapur)</p>
+                    <ul>
+                        <li>Principal: Age 35-50, 5-15 years experience, wants to differentiate on "innovation"</li>
+                        <li>Board: CBSE-affiliated (easier curriculum mapping)</li>
+                        <li>Budget: INR 10-20 lakh/year for school improvements</li>
+                        <li>Motivation: Competitive pressure from better-funded schools, parent demand for "modern education"</li>
+                        <li><strong>Adoption Risk:</strong> LOW (principal-led adoption)</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-tier">
+                    <h4>Segment B: "Aspiring Growth" (30% of addressable market)</h4>
+                    <p><strong>Profile:</strong> Schools with 1,200-2,000 students in tier-2 cities + emerging tier-3</p>
+                    <ul>
+                        <li>Principal: Age 45-60, traditional approach, risk-averse</li>
+                        <li>Board: Mixed (CBSE and state boards)</li>
+                        <li>Budget: INR 5-15 lakh/year (tighter constraints)</li>
+                        <li>Motivation: NEP 2020 compliance, board exam scores, teacher retention</li>
+                        <li><strong>Adoption Risk:</strong> MEDIUM (needs change management)</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-tier">
+                    <h4>Segment C: "Established Premium" (20% of addressable market, lower priority)</h4>
+                    <p><strong>Profile:</strong> Schools with 1,500-2,000+ students, well-resourced tier-2 cities</p>
+                    <ul>
+                        <li>Budget: INR 20-50 lakh+/year</li>
+                        <li>Motivation: Brand differentiation, holistic student outcomes</li>
+                        <li><strong>Note:</strong> Likely already using LEAD, Tata ClassEdge; reposition as "upgrade" option</li>
+                        <li><strong>Adoption Risk:</strong> MEDIUM-HIGH (multiple stakeholders, long sales cycles)</li>
+                    </ul>
+                </div>
+
+                <h3>Unit Economics (Target)</h3>
+                <ul>
+                    <li>Average school size: 800 students</li>
+                    <li>Price point: INR 1.5-2.0 per student/year = INR 12,000-16,000 per school/year</li>
+                    <li>Sales cost per customer: INR 8,000-12,000 (travel, demos, follow-up)</li>
+                    <li>Payback period: 6-10 months (acceptable for school SaaS)</li>
+                    <li>LTV:CAC ratio target: 10:1 by Q4 (starting at 4.8:1 in Q1)</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- SECTION 7: 12-Month Roadmap -->
+        <div id="roadmap" class="tab-content">
+            <section>
+                <h2>12-Month Market Entry Roadmap</h2>
+
+                <h3>Geographic Phasing (12 Months)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Timeline</th>
+                            <th>Primary Markets</th>
+                            <th>Rationale</th>
+                            <th>Target Schools</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Phase 1</strong></td>
+                            <td>Q1 2027 (Months 1-3)</td>
+                            <td>Indore, Nagpur, Bhopal (Central India)</td>
+                            <td>Underserved by LEAD/Extramarks, 2,000+ private schools, tech-receptive principals</td>
+                            <td>15-20 schools (pilot)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phase 2</strong></td>
+                            <td>Q2 2027 (Months 4-6)</td>
+                            <td>Coimbatore, Trichy, Madurai (Tamil Nadu)</td>
+                            <td>State board presence, tier-2 city growth, local language (Tamil) demand</td>
+                            <td>20-30 schools (validation)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phase 3</strong></td>
+                            <td>Q3-Q4 2027 (Months 7-12)</td>
+                            <td>Pune, Ahmedabad, Jaipur</td>
+                            <td>Larger tier-2 cities, more competitive but higher schools-per-capita density</td>
+                            <td>50+ schools (scaling)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Quarterly Roadmap Details</h3>
+
+                <h4>Q1 2027: Foundation & Pilot (Jan-Mar)</h4>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Product Development</h4>
+                        <ul>
+                            <li>MVP launch: LMS + attendance + marks + parent portal + simple analytics</li>
+                            <li>2 state board curriculum mappings (Madhya Pradesh, Maharashtra)</li>
+                            <li>Offline-first mobile app (iOS/Android)</li>
+                            <li>Hindi language support in UI</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Go-to-Market</h4>
+                        <ul>
+                            <li>Hire 4-person direct sales team (targeting, closing)</li>
+                            <li>Tie-up with 2 school supply dealers in Indore/Nagpur</li>
+                            <li>Establish relationships with 5 principals for pilot PoC</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Success Metrics</h4>
+                        <ul>
+                            <li>15 schools in pilot/PoC</li>
+                            <li>70%+ teacher login rate by end of month 3</li>
+                            <li>1-2 schools signed to annual contract</li>
+                            <li>NPS > 40 among pilot schools</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h4>Q2 2027: Pilot Validation & Early Sales (Apr-Jun)</h4>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Product Development</h4>
+                        <ul>
+                            <li>Full LMS with assignment/submission workflow</li>
+                            <li>Assessment management (link to Oswaal, S. Chand question banks)</li>
+                            <li>Teacher performance analytics dashboard</li>
+                            <li>Parent notification system (SMS + app)</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Go-to-Market</h4>
+                        <ul>
+                            <li>Expand direct sales to 6 people (add 2 regional account managers)</li>
+                            <li>Launch case studies (3 pilot schools → "success stories")</li>
+                            <li>Regional partnership: 10 school supply dealers across 3 states</li>
+                            <li>Begin outreach to state education departments (relationship building)</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Sales Target & Success Metrics</h4>
+                        <ul>
+                            <li>25-35 schools signed (cumulative)</li>
+                            <li>INR 30-45 lakh recurring revenue run rate</li>
+                            <li>Gross margin on delivery: >60% (after implementation team costs)</li>
+                            <li>Teacher adoption steady at 70%+</li>
+                            <li>NPS > 45</li>
+                            <li>Zero churn (all Q1 schools renew)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h4>Q3 2027: Scaling & Product Depth (Jul-Sep)</h4>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Product Development</h4>
+                        <ul>
+                            <li>AI-based learning recommendations (identify weak students, suggest interventions)</li>
+                            <li>Multi-teacher collaboration for section/division management</li>
+                            <li>Peer benchmarking dashboard (anonymized school-to-school comparison)</li>
+                            <li>4 additional state board curriculum mappings (UP, Gujarat, Telangana, Karnataka)</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Go-to-Market & Operations</h4>
+                        <ul>
+                            <li>Scale direct sales to 10 people (add regional cluster managers)</li>
+                            <li>Launch school association partnerships (pilot with 2 state/district associations)</li>
+                            <li>Regional support team (local language support in 3 centers)</li>
+                            <li>Press releases / EdTech media coverage (position as "made for Tier-2 schools")</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Sales Target & Success Metrics</h4>
+                        <ul>
+                            <li>60-80 schools signed (cumulative)</li>
+                            <li>INR 90-120 lakh recurring revenue run rate</li>
+                            <li>Churn remains <5%</li>
+                            <li>Teacher adoption at 75%+</li>
+                            <li>Student engagement (weekly active usage) >50%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h4>Q4 2027: Consolidation & Network Effects (Oct-Dec)</h4>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Product Development</h4>
+                        <ul>
+                            <li>Parent app + parent engagement suite (learning insights, parent-teacher messaging)</li>
+                            <li>School admin dashboard (compliance tracking, CPD management, board exam analytics)</li>
+                            <li>Referral program (school recommends → INR 5,000 credit)</li>
+                            <li>1-2 integration partnerships (parent communication platform, assessment vendor)</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Go-to-Market & Operations</h4>
+                        <ul>
+                            <li>12-person direct sales team</li>
+                            <li>15 school dealers across 5 states</li>
+                            <li>Tie-up with 3-4 regional education associations</li>
+                            <li>Begin outreach for Year 2 state education department pilots</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Sales Target & Success Metrics</h4>
+                        <ul>
+                            <li>120-150 schools signed (cumulative)</li>
+                            <li>INR 200-250 lakh recurring revenue run rate</li>
+                            <li><5% churn, >90% renewal rate among Year 1 schools</li>
+                            <li>Net Revenue Retention (customers expand usage) >110%</li>
+                            <li>Teacher adoption at 75%+</li>
+                            <li>NPS > 50</li>
+                            <li>Establish market leadership in 3 tier-2/3 city clusters</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>12-Month Revenue Projection</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Q1</th>
+                            <th>Q2</th>
+                            <th>Q3</th>
+                            <th>Q4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Schools (Cumulative)</strong></td>
+                            <td>1-2</td>
+                            <td>25-35</td>
+                            <td>60-80</td>
+                            <td>120-150</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ARR (INR Lakhs)</strong></td>
+                            <td>1-2</td>
+                            <td>30-45</td>
+                            <td>90-120</td>
+                            <td>200-250</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Churn Rate</strong></td>
+                            <td>—</td>
+                            <td><5%</td>
+                            <td><5%</td>
+                            <td><5%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Net Revenue Retention</strong></td>
+                            <td>—</td>
+                            <td>90%</td>
+                            <td>100%</td>
+                            <td>110%+</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CAC (INR)</strong></td>
+                            <td>10,000</td>
+                            <td>8,000</td>
+                            <td>6,000</td>
+                            <td>5,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>LTV (INR, 3-yr)</strong></td>
+                            <td>48,000</td>
+                            <td>48,000</td>
+                            <td>60,000</td>
+                            <td>72,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>LTV:CAC Ratio</strong></td>
+                            <td>4.8:1</td>
+                            <td>6:1</td>
+                            <td>10:1</td>
+                            <td>14.4:1</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Year 1 Key Success Factors</h3>
+                <ul>
+                    <li><strong>Teacher Adoption >70% in first 3 months</strong> → Proves product-market fit</li>
+                    <li><strong>School NPS >50</strong> → Word-of-mouth becomes free marketing channel</li>
+                    <li><strong>Sub-6-month sales cycle</strong> → Sales team efficiency, low customer acquisition cost</li>
+                    <li><strong>Zero data privacy incidents</strong> → Trust is differentiator in schools</li>
+                    <li><strong>State board curriculum coverage >8 boards</strong> → Removes "CBSE-only" positioning</li>
+                    <li><strong>Establish 3-city market leadership</strong> → 40%+ market share in Indore, Nagpur, Bhopal schools</li>
+                    <li><strong>Referral rate >20% of new schools</strong> → Network effects kick in by Q4</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- SECTION 8: Risk Factors & Mitigation -->
+        <div id="actions" class="tab-content">
+            <section>
+                <h2>Risk Factors & Next Steps</h2>
+
+                <h3>Critical Risk Factors</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Risk</th>
+                            <th>Impact</th>
+                            <th>Likelihood</th>
+                            <th>Mitigation Strategy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>School Budget Cuts</strong><br/>(economic slowdown, fee caps)</td>
+                            <td>Sales decline, churn, pricing pressure</td>
+                            <td>Medium-High</td>
+                            <td>Develop "essential-only" tier at INR 500/student/year; focus on cost reduction claims</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Competitor Price Wars</strong><br/>(LEAD, Extramarks cut prices)</td>
+                            <td>Margin erosion, churn</td>
+                            <td>Medium</td>
+                            <td>Differentiate on outcomes/teacher training, not price; build switching costs</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Teacher Resistance to Tech</strong></td>
+                            <td>Low adoption, school dissatisfaction</td>
+                            <td>Medium</td>
+                            <td>Invest in on-site training; hire education psychologists for change management</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Curriculum Compliance Issues</strong><br/>(board alignment wrong)</td>
+                            <td>Sales delay, compliance penalties</td>
+                            <td>Medium</td>
+                            <td>Hire 2 curriculum specialists; test mappings with 5 schools per board</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Local Competition Emerges</strong></td>
+                            <td>Market fragmentation, acquisition cost rise</td>
+                            <td>High</td>
+                            <td>Build moat: community (peer benchmarking), teacher training IP, local language depth</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Data Privacy Violations</strong><br/>(DISHA rules apply)</td>
+                            <td>Reputation damage, fines</td>
+                            <td>Low-Medium</td>
+                            <td>Hire DPO; audit parent/student data handling; transparent privacy policy</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Customer Concentration</strong><br/>(top 10 schools = 30% revenue)</td>
+                            <td>Revenue cliff risk</td>
+                            <td>Medium</td>
+                            <td>Develop tiered pricing; cap single-school revenue at 15%</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Top 3 Mitigation Priorities</h3>
+                <div class="callout success">
+                    <strong>1. Teacher Adoption Guarantee</strong>
+                    <p>Tie implementation success to teacher adoption metrics; offer co-funded training if targets miss. This directly addresses the #1 market pain point and builds differentiation vs. competitors.</p>
+                </div>
+
+                <div class="callout success">
+                    <strong>2. Multi-Board Curriculum Strategy</strong>
+                    <p>Hire 1 curriculum expert per 2 boards; validate mapping with 10+ schools per board before launch. Prevents compliance issues and positions product as board-agnostic, not "CBSE-only."</p>
+                </div>
+
+                <div class="callout success">
+                    <strong>3. Data Trust Foundation</strong>
+                    <p>Publish annual data security audit; create a "school data council" (3-4 principals review data policies). Trust is the differentiator in a market starved for it; build early.</p>
+                </div>
+
+                <h3>Recommended Immediate Actions (Next 30 Days)</h3>
+
+                <h4>Market Research & Validation</h4>
+                <ul>
+                    <li>Conduct 20 in-depth interviews with school principals in Indore, Nagpur, Bhopal tier-2 cities</li>
+                    <li>Map 50-100 potential pilot schools in central India; score by adoption likelihood</li>
+                    <li>Interview 10 educators at competing vendors (LEAD, Extramarks) to understand implementation gaps</li>
+                    <li>Validate pricing elasticity: Would INR 1.5-2.0 per student/year at 90-day implementation land schools?</li>
+                </ul>
+
+                <h4>Product & Technical Foundation</h4>
+                <ul>
+                    <li>Build MVP product roadmap (3-month sprint): LMS + attendance + marks + parent portal</li>
+                    <li>Secure early curriculum experts for 2 state boards (Madhya Pradesh, Maharashtra)</li>
+                    <li>Prototype offline-first mobile app architecture (test with 2G connectivity)</li>
+                    <li>Establish data privacy & security framework (DISHA compliance, school data handling)</li>
+                </ul>
+
+                <h4>Team & Partnerships</h4>
+                <ul>
+                    <li>Hire founding sales lead with school SaaS experience</li>
+                    <li>Recruit 1 education/pedagogy advisor (ex-teacher or education researcher)</li>
+                    <li>Identify 2-3 school supply dealer partners in central India</li>
+                    <li>Map state education department contacts for future pilots (NEP 2020 alignment)</li>
+                </ul>
+
+                <h4>Competitive & Reputation Positioning</h4>
+                <ul>
+                    <li>Build "transparency by design" value prop: third-party review platform, outcome audits, refund SLA</li>
+                    <li>Design referral program framework (school → school word-of-mouth)</li>
+                    <li>Establish Trustpilot/G2 presence pre-launch (seed with founder testimonials)</li>
+                    <li>Draft messaging pillars: "Digital Transformation Without the Risk" for principals</li>
+                </ul>
+
+                <h3>Success Metrics to Track</h3>
+                <ul>
+                    <li>Pilot school adoption: >70% teacher login rate by week 4 of implementation</li>
+                    <li>Pilot school NPS: >40 by end of 3-month pilot (40 is healthy for B2B education)</li>
+                    <li>Sales cycle: 6-month average from first contact to contract (industry benchmark)</li>
+                    <li>Customer satisfaction: <5% monthly churn, >90% year-1 renewal rate</li>
+                    <li>Financial: LTV:CAC >6:1 by Q2 2027 (healthy SaaS benchmark)</li>
+                    <li>Market share: 40%+ share in target Indore, Nagpur, Bhopal schools by Q4 2027</li>
+                </ul>
+
+                <h3>Conclusion: Market Opportunity Summary</h3>
+                <div class="callout info">
+                    <strong>India's K-12 edtech market is bifurcated:</strong>
+                    <ul>
+                        <li>96% of schools lack budgets</li>
+                        <li>50-80K tech-forward schools are desperate for integrated, implementable solutions</li>
+                        <li>Teacher adoption support is the primary pain point existing software-only competitors ignore</li>
+                    </ul>
+                    <p><strong>Key Insight:</strong> LEAD's bundled model is proven but expensive. Your hybrid model delivers 70% of LEAD's value at 40% of the price, with hyper-local service. Tier-2/3 cities lack this "sweet spot" offering, making it your primary beachhead.</p>
+                    <p><strong>12-Month Goals:</strong></p>
+                    <ul>
+                        <li>120-150 schools in contract</li>
+                        <li>INR 200-250 crore recurring revenue run rate</li>
+                        <li>NPS >50, <5% churn</li>
+                        <li>Market leadership in central/south India tier-2 cities</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p><strong>India K-12 EdTech Market Analysis Report</strong></p>
+            <p>Generated: November 18, 2026 | Research Period: 2024-2026</p>
+            <p>Report covers 11 major competitors, pricing models, customer sentiment, and market entry strategy</p>
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">Data sourced from market reports, company announcements, industry databases, and customer reviews</p>
+        </footer>
+    </div>
+
+    <!-- Tab Navigation Script -->
+    <script>
+        function switchTab(event, tabName) {
+            event.preventDefault();
+
+            // Hide all tabs
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.nav-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+                const tabs = Array.from(document.querySelectorAll('.nav-tab'));
+                const activeTab = document.querySelector('.nav-tab.active');
+                const currentIndex = tabs.indexOf(activeTab);
+
+                let nextIndex;
+                if (event.key === 'ArrowRight') {
+                    nextIndex = (currentIndex + 1) % tabs.length;
+                } else {
+                    nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+                }
+
+                tabs[nextIndex].click();
+            }
+        });
+    </script>
+</body>
+</html>
