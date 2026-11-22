@@ -1,24 +1,21 @@
-﻿# India K-12 Private School Services — Market Entry Strategy
+﻿# EdTech India K-12 Market Entry Strategy
+## Private Unaided Schools in Tier-2/Tier-3 Cities | INR 500-3000 Per Student Budget
 
-**Prepared:** May 2026 | **Stage:** Pre-launch / Early Launch
+**Document Date:** November 2026  
+**Target Segment:** 300-2,000 student private schools in tier-2/tier-3 cities  
+**TAM:** Estimated USD 8.9B (2025) → USD 19B (2030) at 16.4% CAGR
+
+---
 
 ## Executive Summary
 
-- **Biggest white space:** 150,000–200,000 small tier-2/3 schools with zero credible partner in budget ceiling (INR 500–2,500/student/year). This is the entry wedge.
+India's K-12 EdTech market is in a critical inflection point. While tier-1 cities and metro schools are saturated with competing solutions, tier-2/tier-3 cities (representing 70% of India's population) remain underpenetrated yet show 25-30% YoY growth in adoption. 
 
-- **Modular defeats lock-in:** LEAD and Next Education require full-stack commitment. A "start small, add more" model removes the #1 adoption barrier for cautious principals post-BYJU's.
+**Key Opportunity:** 90% of private schools in tier-2/tier-3 cities lack integrated solutions addressing three simultaneous pain points: (1) teacher digital capability gaps, (2) affordability constraints, and (3) state-board curriculum alignment.
 
-- **NEP 2020 urgency:** Schools scrambling to align to NEP mandates. Bilingual/vernacular content gap is critical and unserved. "NEP-ready implementation partner" is an immediate, concrete conversation starter.
+**Window:** Government's mandated AI curriculum rollout (CBSE 2026-27 across 18,000 schools) creates legitimate urgency. However, only 40% of private-school teachers have GenAI literacy vs. 51-68% in government schools—creating a critical implementation gap that point solutions cannot fill.
 
-## Market Gap #1: Affordable Full-Service Partnership (HIGHEST PRIORITY)
-
-**Evidence:**
-- India K-12 market: USD 103B (2025), growing 11.57% CAGR. EdTech: 27.94% CAGR.
-- Tier-2/3 schools budget: INR 500–2,500/student/year max for external services.
-- XSEED books alone: INR 4,000+/child for primary grades.
-- No credible full-service provider currently serves this segment.
-
-**Opportunity:** At INR 800/student/year across 200-student school = INR 1.6 lakh ARR per school. 5,000 schools = INR 80 crore ARR market.
+**Market Reality:** The ₹500-3,000 per-student budget is achievable but requires a **bundled, affordable model** that combines ERP, curriculum management, teacher training, and modest smart-classroom capability—not premium pricing.
 
 ## Market Gap #2: Modular Adoption vs. Full-School Lock-In
 
