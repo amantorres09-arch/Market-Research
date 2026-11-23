@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India K-12 School Services Market Report 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e5a7a;
+            --primary-light: #2a7ba8;
+            --primary-dark: #0d3d54;
+            --accent-orange: #e67e22;
+            --accent-green: #27ae60;
+            --accent-red: #c0392b;
+            --bg-light: #ecf0f1;
+            --text-dark: #2c3e50;
+            --text-muted: #7f8c8d;
+            --border-color: #bdc3c7;
+            --shadow: 0 2px 8px rgba(0,0,0,0.1);
+            --shadow-lg: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        .key-numbers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .key-number {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-orange);
+        }
+
+        .key-number .value {
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+
+        .key-number .label {
+            font-size: 0.85em;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        /* Content */
+        .content {
+            padding: 40px 30px;
+        }
+
+        section {
+            margin-bottom: 50px;
+            scroll-margin-top: 100px;
+        }
+
+        section h2 {
+            font-size: 1.8em;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            border-bottom: 3px solid var(--accent-orange);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* Executive Summary */
+        .executive-summary {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ecf0f1 100%);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            box-shadow: var(--shadow);
+        }
+
+        .summary-card.insight {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #fff3cd 0%, #ffe8a1 100%);
+            border-left-color: var(--accent-orange);
+            padding: 25px;
+            font-weight: 500;
+            line-height: 1.8;
+        }
+
+        .summary-card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .summary-card ul {
+            margin-left: 20px;
+        }
+
+        .summary-card li {
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+
+        .card .metric {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--bg-light);
+        }
+
+        .card .metric:last-child {
+            border-bottom: none;
+        }
+
+        .card .metric-label {
+            color: var(--text-muted);
+            font-size: 0.9em;
+        }
+
+        .card .metric-value {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        /* Tables */
+        .table-wrapper {
+            overflow-x: auto;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95em;
+        }
+
+        thead {
+            background: var(--primary);
+            color: white;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        tbody tr:hover {
+            background: #f0f4f8;
+        }
+
+        .company-name {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* Features Matrix */
+        .matrix-cell {
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .matrix-cell.yes {
+            color: var(--accent-green);
+            background: #f0fdf4;
+        }
+
+        .matrix-cell.no {
+            color: var(--text-muted);
+            background: #fafafa;
+        }
+
+        .matrix-cell.partial {
+            color: var(--accent-orange);
+            background: #fffaf0;
+        }
+
+        /* Pricing Bands */
+        .pricing-band {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .price-tier {
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .price-tier:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .price-tier.recommended {
+            border-color: var(--accent-green);
+            background: linear-gradient(135deg, #f0fdf4 0%, #f1fdf5 100%);
+            transform: scale(1.05);
+        }
+
+        .price-tier h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .price-tier .price {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--accent-orange);
+            margin: 10px 0;
+        }
+
+        .price-tier .per {
+            font-size: 0.85em;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .price-tier .features {
+            text-align: left;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .price-tier .features li {
+            margin-bottom: 6px;
+        }
+
+        /* Reputation */
+        .reputation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .reputation-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .reputation-card h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1em;
+        }
+
+        .sentiment {
+            margin: 12px 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .sentiment-label {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .sentiment.positive {
+            background: #f0fdf4;
+            border-left: 4px solid var(--accent-green);
+        }
+
+        .sentiment.negative {
+            background: #fef2f2;
+            border-left: 4px solid var(--accent-red);
+        }
+
+        .sentiment.gap {
+            background: #fff3cd;
+            border-left: 4px solid var(--accent-orange);
+        }
+
+        /* Roadmap */
+        .roadmap {
+            margin-top: 20px;
+        }
+
+        .roadmap-phase {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ecf0f1 100%);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--primary);
+            border-radius: 4px;
+        }
+
+        .roadmap-phase.phase-1 {
+            border-left-color: var(--accent-orange);
+        }
+
+        .roadmap-phase.phase-2 {
+            border-left-color: var(--primary);
+        }
+
+        .roadmap-phase.phase-3 {
+            border-left-color: var(--accent-green);
+        }
+
+        .roadmap-phase.phase-4 {
+            border-left-color: #9b59b6;
+        }
+
+        .roadmap-phase h4 {
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .roadmap-phase .metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .roadmap-phase .metric-item {
+            font-size: 0.9em;
+            padding: 8px;
+            background: white;
+            border-radius: 4px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .roadmap-phase .metric-item strong {
+            color: var(--primary-dark);
+        }
+
+        /* Opportunities */
+        .opportunities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .opportunity {
+            background: linear-gradient(135deg, #f9f9f9 0%, #f5f5f5 100%);
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 4px solid var(--accent-green);
+            box-shadow: var(--shadow);
+        }
+
+        .opportunity h4 {
+            color: var(--accent-green);
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .opportunity ul {
+            margin-left: 20px;
+        }
+
+        .opportunity li {
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .executive-summary,
+            .key-numbers,
+            .card-grid,
+            .pricing-band,
+            .reputation-grid,
+            .opportunities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .summary-card.insight {
+                grid-column: 1;
+            }
+
+            .price-tier.recommended {
+                transform: scale(1);
+            }
+
+            .header h1 {
+                font-size: 1.6em;
+            }
+
+            section h2 {
+                font-size: 1.4em;
+            }
+
+            th, td {
+                padding: 10px;
+                font-size: 0.85em;
+            }
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--accent-green);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin: 2px;
+            font-weight: 600;
+        }
+
+        .badge.warning {
+            background: var(--accent-orange);
+        }
+
+        .badge.critical {
+            background: var(--accent-red);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>India K-12 School Services Market</h1>
+            <div class="subtitle">Competitive Intelligence Report</div>
+            <div class="subtitle" style="font-size: 0.95em; opacity: 0.85;">November 23, 2026</div>
+
+            <div class="key-numbers">
+                <div class="key-number">
+                    <div class="value">USD 4.74B</div>
+                    <div class="label">Market Size (2026)</div>
+                </div>
+                <div class="key-number">
+                    <div class="value">18.6%</div>
+                    <div class="label">CAGR (2027–2032)</div>
+                </div>
+                <div class="key-number">
+                    <div class="value">1.5M</div>
+                    <div class="label">K-12 Schools in India</div>
+                </div>
+                <div class="key-number">
+                    <div class="value">260M</div>
+                    <div class="label">Student Population</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- Executive Summary -->
+            <section>
+                <h2>Executive Summary</h2>
+
+                <div class="executive-summary">
+                    <div class="summary-card">
+                        <h3>Market Opportunity</h3>
+                        <ul>
+                            <li><strong>Massive TAM:</strong> 1.5M schools, <1% penetration by largest player (LEAD)</li>
+                            <li><strong>Decade-long runway:</strong> Even at current growth, market will remain underpenetrated through 2032</li>
+                            <li><strong>Rising EdTech intensity:</strong> Digital education growing 23.2% CAGR through 2034</li>
+                        </ul>
+                    </div>
+
+                    <div class="summary-card">
+                        <h3>Market Dynamics (Nov 2026)</h3>
+                        <ul>
+                            <li><strong>Consolidation wave:</strong> LEAD acquired Pearson India; Eupheus acquired ClassKlap ($19M)</li>
+                            <li><strong>Funding winter:</strong> Only $214M invested YTD 2026, down 95% from $4.1B peak (2021)</li>
+                            <li><strong>NEP 2020 driving demand:</strong> Policy mandates competency-based learning, bilingual content</li>
+                        </ul>
+                    </div>
+
+                    <div class="summary-card insight">
+                        <strong>🎯 Breakthrough Insight:</strong> 150,000–200,000 tier-2/3 schools remain completely underserved in the INR 500–2,500/student/year budget band. Premium incumbents (LEAD, XSEED) cannot affordably serve this segment without destroying unit economics. First mover offering modular, transparent pricing + NEP compliance + vernacular content can capture INR 80–120 crore TAM within 24 months.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Market Landscape -->
+            <section>
+                <h2>Market Landscape</h2>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Market Sizing</h3>
+                        <div class="metric">
+                            <span class="metric-label">K-12 EdTech Market (2026)</span>
+                            <span class="metric-value">USD 4.74B</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Projected (2032)</span>
+                            <span class="metric-value">USD 13.22B</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Digital Education (2026)</span>
+                            <span class="metric-value">USD 6.8B</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Total School Market</span>
+                            <span class="metric-value">USD 65.52B</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Competitive Landscape</h3>
+                        <div class="metric">
+                            <span class="metric-label">Total K-12 Schools</span>
+                            <span class="metric-value">1.5M</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Private Schools</span>
+                            <span class="metric-value">600K (40%)</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Top Player Reach</span>
+                            <span class="metric-value">LEAD: 9,000 schools</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Penetration Rate</span>
+                            <span class="metric-value">&lt;1%</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Top Competitor Reach</h3>
+                        <div class="metric">
+                            <span class="metric-label">LEAD School (post-Pearson)</span>
+                            <span class="metric-value">9,000+ → 60,000 schools</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Next Education</span>
+                            <span class="metric-value">18,000 schools</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Extramarks</span>
+                            <span class="metric-value">20,000 schools</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Navneet TOPTECH</span>
+                            <span class="metric-value">40,000 schools</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 30px; color: var(--primary-dark);">Recent M&A Activity (2024–2026)</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Acquirer</th>
+                                <th>Target</th>
+                                <th>Date</th>
+                                <th>Key Impact</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="company-name">LEAD School</td>
+                                <td>Pearson India K-12</td>
+                                <td>Mar 2026</td>
+                                <td>LEAD expects 60,000+ schools by end-2026. Major content consolidation.</td>
+                            </tr>
+                            <tr>
+                                <td class="company-name">Eupheus Learning</td>
+                                <td>ClassKlap</td>
+                                <td>2026</td>
+                                <td>$19M all-stock deal. Major B2B EdTech acquisition.</td>
+                            </tr>
+                            <tr>
+                                <td class="company-name">Schoolnet</td>
+                                <td>GeniusTeacher</td>
+                                <td>Jul 2024</td>
+                                <td>AI-driven school edtech. Target: 10,000+ schools by FY 2027.</td>
+                            </tr>
+                            <tr>
+                                <td class="company-name">upGrad</td>
+                                <td>Unacademy</td>
+                                <td>Mar 2026</td>
+                                <td>$245M merger. Links school coaching to higher ed/skilling.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="background: #fff3cd; padding: 15px; border-radius: 8px; margin-top: 20px; border-left: 4px solid var(--accent-orange);">
+                    <strong>Key Trend:</strong> Consolidation has replaced greenfield investment as primary growth lever. Established players are racing to acquire reach and content libraries while funding has cooled. Sector viability remains strong (18.6% CAGR through 2032), but capital allocation has shifted to proven business models.
+                </div>
+            </section>
+
+            <!-- Service & Pricing Comparison -->
+            <section>
+                <h2>Service & Pricing Comparison</h2>
+
+                <h3 style="margin-top: 20px; margin-bottom: 15px; color: var(--primary-dark); font-size: 1.1em;">Pricing Models by Company</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Company</th>
+                                <th>Price Range</th>
+                                <th>Model</th>
+                                <th>Contract</th>
+                                <th>Transparency</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="company-name">LEAD School</td>
+                                <td>Rs 1,400–3,000/student</td>
+                                <td>Per-student subscription</td>
+                                <td>Annual</td>
+                                <td><span class="badge">Quote-based</span></td>
+                            </tr>
+                            <tr>
+                                <td class="company-name">Next Education</td>
+                                <td>Rs 3–12 lakh/school</td>
+                                <td>Per-school flat fee</td>
+                                <td>1–3 years</td>
+                                <td><span class="badge">Quote-based</span></td>
+                            </tr>
+                            <tr>
+                                <td class="company-name">XSEED Education</td>
+                                <td>Rs 1–5L + Rs 4K+ books</td>
+                                <td>License + materials</td>
+                                <td>Annual</td>
+                                <td><span class="badge">Quote-based</span></td>
+                            </tr>
+                            <tr>
+                                <td class="company-name">Tata ClassEdge</td>
+                                <td>Rs 5–80 lakh</td>
+                                <td>Hardware + software</td>
+                                <td>3–5 years</td>
+                                <td><span class="badge warning">Vendor Lock-In</span></td>
+                            </tr>
+                            <tr>
+                                <td class="company-name">iDream Education</td>
+                                <td>Rs 8K–10K/classroom</td>
+                                <td>Modular/flexible</td>
+                                <td>1yr–lifetime</td>
+                                <td><span class="badge" style="background: var(--accent-green);">Published</span></td>
+                            </tr>
+                            <tr>
+                                <td class="company-name">Extramarks</td>
+                                <td>Rs 1,800–3,640</td>
+                                <td>Per-student + exam prep</td>
+                                <td>Custom</td>
+                                <td><span class="badge">Quote-based</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 style="margin-top: 30px; margin-bottom: 15px; color: var(--primary-dark); font-size: 1.1em;">Critical Pricing Insight</h3>
+                <div style="background: #f0f4f8; padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary); margin-bottom: 20px;">
+                    <p><strong>Pricing opacity is structural:</strong> 10 of 11 vendors use custom school-by-school negotiation with no public pricing. This advantages large metros and disadvantages tier-2/3 schools without procurement expertise. Only iDream publishes ranges (Rs 8K–10K/classroom/year).</p>
+                    <p style="margin-top: 10px;"><strong>Hidden material costs:</strong> XSEED workbooks (Rs 3–5K/child/year) are the loudest complaint and can exceed entire external services budget for small schools.</p>
+                </div>
+
+                <h3 style="margin-bottom: 15px; color: var(--primary-dark); font-size: 1.1em;">Feature Comparison Matrix</h3>
+                <div class="table-wrapper">
+                    <table style="font-size: 0.85em;">
+                        <thead>
+                            <tr>
+                                <th>Service Category</th>
+                                <th>LEAD</th>
+                                <th>Next Edu</th>
+                                <th>XSEED</th>
+                                <th>Tata</th>
+                                <th>iDream</th>
+                                <th>Extramarks</th>
+                                <th>Navneet</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Full Curriculum</strong></td>
+                                <td class="matrix-cell yes">✓</td>
+                                <td class="matrix-cell partial">◐</td>
+                                <td class="matrix-cell partial">◐</td>
+                                <td class="matrix-cell no">–</td>
+                                <td class="matrix-cell partial">◐</td>
+                                <td class="matrix-cell partial">◐</td>
+                                <td class="matrix-cell no">–</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Adaptive Learning</strong></td>
+                                <td class="matrix-cell partial">◐</td>
+                                <td class="matrix-cell partial">◐</td>
+                                <td class="matrix-cell no">–</td>
+                                <td class="matrix-cell no">–</td>
+                                <td class="matrix-cell yes">✓</td>
+                                <td class="matrix-cell no">–</td>
+                                <td class="matrix-cell no">–</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AI Tools</strong></td>
+                                <td class="matrix-cell no">–</td>
+                                <td class="matrix-cell no">–</td>
+                                <td class="matrix-cell no">–</td>
+                                <td class="matrix-cell no">–</td>
+                                <td class="matrix-cell no">–</td>
+                                <td class="matrix-cell no">–</td>
+                                <td class="matrix-cell yes">✓</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Full ERP/Management</strong></td>
+                                <td class="matrix-cell partial">◐</td>
+                                <td class="matrix-cell yes">✓</td>
+                                <td class="matrix-cell partial">◐</td>
+                                <td class="matrix-cell partial">◐</td>
+                                <td class="matrix-cell no">–</td>
+                                <td class="matrix-cell yes">✓</td>
+                                <td class="matrix-cell partial">◐</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Teacher Training</strong></td>
+                                <td class="matrix-cell yes">✓</td>
+                                <td class="matrix-cell partial">◐</td>
+                                <td class="matrix-cell yes">✓</td>
+                                <td class="matrix-cell partial">◐</td>
+                                <td class="matrix-cell partial">◐</td>
+                                <td class="matrix-cell partial">◐</td>
+                                <td class="matrix-cell yes">✓</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; margin-top: 20px; border-left: 4px solid var(--accent-orange); font-size: 0.95em;">
+                    <strong>✓ = Fully offered | ◐ = Partial / Limited | – = Not offered</strong>
+                </div>
+            </section>
+
+            <!-- Reputation & Customer Perception -->
+            <section>
+                <h2>Reputation & Customer Perception</h2>
+
+                <div class="summary-card" style="background: #fff3cd; border-left-color: var(--accent-orange); margin-bottom: 20px;">
+                    <strong>🚨 Critical Finding:</strong> All major competitors are <strong>invisible on mainstream B2B review platforms</strong> (G2, Capterra, Techjockey, Software Suggest). This represents a <strong>zero-cost first-mover advantage window</strong>. First player to publish 10 verified school reviews will immediately dominate vendor searches ahead of LEAD, Next Education, and XSEED.
+                </div>
+
+                <h3 style="margin-top: 20px; margin-bottom: 15px; color: var(--primary-dark); font-size: 1.1em;">Competitor Reputation Status (Nov 2026)</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Company</th>
+                                <th>Employee Rating</th>
+                                <th>Review Platform Presence</th>
+                                <th>Customer Reviews Found</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="company-name">LEAD School</td>
+                                <td><span class="badge warning">3.3/5</span> (739 reviews)</td>
+                                <td><span class="badge critical">Not listed</span></td>
+                                <td>None (B2C app only)</td>
+                            </tr>
+                            <tr>
+                                <td class="company-name">Next Education</td>
+                                <td><span class="badge">3.5/5</span> (G2: 3 reviews)</td>
+                                <td><span class="badge">3–4 platforms</span></td>
+                                <td>Minimal (mostly partner feedback)</td>
+                            </tr>
+                            <tr>
+                                <td class="company-name">Extramarks</td>
+                                <td><span class="badge warning">3.4/5</span> (1.9k reviews)</td>
+                                <td><span class="badge critical">Not listed</span></td>
+                                <td>None (B2C app only)</td>
+                            </tr>
+                            <tr>
+                                <td class="company-name">XSEED</td>
+                                <td><span class="badge warning">2.9–3.0/5</span> (130 reviews)</td>
+                                <td><span class="badge critical">Not listed</span></td>
+                                <td>None (parent complaints on forums)</td>
+                            </tr>
+                            <tr>
+                                <td class="company-name">Tata ClassEdge</td>
+                                <td><span class="badge warning">3.4/5</span> (254 reviews)</td>
+                                <td><span class="badge">Listed (Techjockey)</span></td>
+                                <td>Sparse (hardware + contract complaints)</td>
+                            </tr>
+                            <tr>
+                                <td class="company-name">iDream</td>
+                                <td><span class="badge">3.5–3.7/5</span> (Trustpilot)</td>
+                                <td><span class="badge">International platforms</span></td>
+                                <td>Sparse (5–10 reviews globally)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 style="margin-top: 30px; margin-bottom: 15px; color: var(--primary-dark); font-size: 1.1em;">Customer Sentiment Analysis</h3>
+                <div class="reputation-grid">
+                    <div class="reputation-card">
+                        <h4>🟢 LEAD School</h4>
+                        <div class="sentiment positive">
+                            <span class="sentiment-label">Strengths:</span> Full-stack integration, performance guarantees, unicorn brand
+                        </div>
+                        <div class="sentiment negative">
+                            <span class="sentiment-label">Pain Points:</span> Customer service unavailable after 6pm, app bugs, aggressive marketing
+                        </div>
+                    </div>
+
+                    <div class="reputation-card">
+                        <h4>🟡 Next Education</h4>
+                        <div class="sentiment positive">
+                            <span class="sentiment-label">Strengths:</span> Good curriculum mapping, support availability, scale proof
+                        </div>
+                        <div class="sentiment negative">
+                            <span class="sentiment-label">Pain Points:</span> Post-sale support dropout, high-pressure sales, staff turnover
+                        </div>
+                    </div>
+
+                    <div class="reputation-card">
+                        <h4>🔴 XSEED</h4>
+                        <div class="sentiment positive">
+                            <span class="sentiment-label">Strengths:</span> Independent thinking, conceptual learning, teacher confidence
+                        </div>
+                        <div class="sentiment negative">
+                            <span class="sentiment-label">Pain Points:</span> Quality vs. growth trade-offs, rigid lesson plans, high cost
+                        </div>
+                    </div>
+
+                    <div class="reputation-card">
+                        <h4>🟡 Tata ClassEdge</h4>
+                        <div class="sentiment positive">
+                            <span class="sentiment-label">Strengths:</span> Tata brand trust, study material quality, ease of use
+                        </div>
+                        <div class="sentiment negative">
+                            <span class="sentiment-label">Pain Points:</span> Hardware ownership misrepresentation, vendor lock-in, limited offline
+                        </div>
+                    </div>
+
+                    <div class="reputation-card">
+                        <h4>🟢 iDream</h4>
+                        <div class="sentiment positive">
+                            <span class="sentiment-label">Strengths:</span> Student engagement, multilingual support, measurable outcomes
+                        </div>
+                        <div class="sentiment gap">
+                            <span class="sentiment-label">Gap:</span> Too few reviews to establish pattern
+                        </div>
+                    </div>
+
+                    <div class="reputation-card">
+                        <h4>⚠️ Universal Gaps</h4>
+                        <div class="sentiment gap">
+                            <span class="sentiment-label">Gap 1:</span> No competitor owns B2B review platforms (first-mover opportunity)
+                        </div>
+                        <div class="sentiment gap">
+                            <span class="sentiment-label">Gap 2:</span> No case studies frame school-owner concerns (enrollment, fees, parent satisfaction)
+                        </div>
+                        <div class="sentiment gap">
+                            <span class="sentiment-label">Gap 3:</span> Post-sale support cited as universal pain point; no published SLAs
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Strategic Opportunities -->
+            <section>
+                <h2>Strategic Opportunities</h2>
+
+                <h3 style="margin-top: 20px; margin-bottom: 15px; color: var(--primary-dark); font-size: 1.1em;">Market Gaps (Addressable by New Entrants)</h3>
+                <div class="opportunities-grid">
+                    <div class="opportunity">
+                        <h4>🎯 Gap #1: Affordable Full-Service Partnership</h4>
+                        <ul>
+                            <li><strong>The Gap:</strong> 150,000–200,000 tier-2/3 schools have zero credible partner under INR 2,500/student/year</li>
+                            <li><strong>TAM:</strong> INR 80–120 crore annual services market</li>
+                            <li><strong>Why Incumbents Can't Compete:</strong> LEAD/XSEED require full-stack upfront; can't affordably serve small schools</li>
+                            <li><strong>Entry Position:</strong> "Start Small, Grow With Us" modular model at Rs 599–799/student (Tier 1)</li>
+                        </ul>
+                    </div>
+
+                    <div class="opportunity">
+                        <h4>🎯 Gap #2: Modular Adoption vs. Full-School Lock-In</h4>
+                        <ul>
+                            <li><strong>The Gap:</strong> Post-BYJU's trust crisis, principals want "try one module, pay only for that"</li>
+                            <li><strong>Incumbent Problem:</strong> Unit economics built on 70–90% full-school contracts; can't fragment to per-module</li>
+                            <li><strong>Proof Point:</strong> 60%+ upsell from Tier 1 to Tier 2 would validate low CAC expansion revenue</li>
+                            <li><strong>Structural Moat:</strong> LEAD/XSEED locked into full-stack model; cannot restructure pricing without cannibalizing existing base</li>
+                        </ul>
+                    </div>
+
+                    <div class="opportunity">
+                        <h4>🎯 Gap #3: NEP 2020 Compliance + Vernacular Content</h4>
+                        <ul>
+                            <li><strong>The Gap:</strong> NEP mandates mother-tongue through Grade 5; zero premium provider offers bilingual content at scale</li>
+                            <li><strong>Market Fact:</strong> 60%+ of schools operate in regional languages; only 22.9% of Grade 5 vernacular students read English</li>
+                            <li><strong>Incumbent Problem:</strong> LEAD/XSEED deliver English-medium; retrofitting bilingual = 18–24 months</li>
+                            <li><strong>Position:</strong> "NEP Compliance in 60 Days" (bilingual curriculum + teacher training + audit)</li>
+                        </ul>
+                    </div>
+
+                    <div class="opportunity">
+                        <h4>🎯 Gap #4: Review Platform First-Mover</h4>
+                        <ul>
+                            <li><strong>The Gap:</strong> All competitors invisible on G2, Capterra, Techjockey, Software Suggest</li>
+                            <li><strong>Opportunity Window:</strong> First 10 verified school reviews puts you ahead of LEAD + Next Education combined</li>
+                            <li><strong>Competitive Proof:</strong> No incumbent has built vendor-side review presence despite 2+ years awareness</li>
+                            <li><strong>90-Day Window:</strong> Build 30–40 reviews + 4–6 case studies before incumbents respond</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 30px; margin-bottom: 15px; color: var(--primary-dark); font-size: 1.1em;">Recommended Differentiation Pillars</h3>
+                <div class="pricing-band">
+                    <div class="price-tier">
+                        <h4>Pillar 1: Modular Entry</h4>
+                        <p style="font-size: 0.9em; line-height: 1.6; margin-top: 10px;">Schools start with one module (teacher training only), experience value in 60 days, then organically upgrade to full stack. No other vendor can copy this due to unit economics lock-in.</p>
+                    </div>
+                    <div class="price-tier">
+                        <h4>Pillar 2: Vernacular Compliance</h4>
+                        <p style="font-size: 0.9em; line-height: 1.6; margin-top: 10px;">Only vendor offering bilingual curriculum mapped to state boards + NEP requirements. Retrofitting this takes incumbents 18–24 months.</p>
+                    </div>
+                    <div class="price-tier">
+                        <h4>Pillar 3: Transparent Outcomes</h4>
+                        <p style="font-size: 0.9em; line-height: 1.6; margin-top: 10px;">Publish quarterly Teacher NPS + school-level metrics. Competitors can't match transparency without exposing operational issues.</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 30px; margin-bottom: 15px; color: var(--primary-dark); font-size: 1.1em;">Recommended GTM Channels (Rank-Ordered by Unit Economics)</h3>
+                <div style="background: white; border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; margin-top: 20px;">
+                    <table style="margin: 0; border: none;">
+                        <thead style="background: var(--primary);">
+                            <tr>
+                                <th>Channel</th>
+                                <th>CAC</th>
+                                <th>Conversion</th>
+                                <th>Year 1 Target</th>
+                                <th>Key Success Factor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>CBSE Sahodaya Associations</strong> ⭐</td>
+                                <td>INR 2–5K</td>
+                                <td>10–18%</td>
+                                <td>300–500 schools</td>
+                                <td>Relationship with chapter president; 20-min presentation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Field Sales (Tier-2 Cities)</strong></td>
+                                <td>INR 8–15K</td>
+                                <td>8–12%</td>
+                                <td>100–150 schools</td>
+                                <td>Local hiring; school sales experience (textbook, ERP)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Inside Sales (WhatsApp)</strong></td>
+                                <td>INR 4–8K</td>
+                                <td>4–7%</td>
+                                <td>100–200 schools</td>
+                                <td>UDISE+ database; NEP audit lead magnet; regional languages</td>
+                            </tr>
+                            <tr>
+                                <td><strong>State Board Associations</strong></td>
+                                <td>INR 3–8K</td>
+                                <td>8–12%</td>
+                                <td>50–100 schools</td>
+                                <td>NEP compliance positioning; state board partnerships</td>
+                            </tr>
+                            <tr>
+                                <td style="color: var(--text-muted);"><strong>Digital Ads + LinkedIn</strong> (Skip in Y1)</td>
+                                <td>INR 7.5–17.5K</td>
+                                <td>2–4%</td>
+                                <td>Revisit Month 7+</td>
+                                <td>Only if field CAC exceeds target; use case studies for retargeting</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Service & Pricing Recommendations -->
+            <section>
+                <h2>Recommended Pricing Tiers</h2>
+                <p style="margin-bottom: 20px; color: var(--text-muted);">Modular, transparent, 30–55% below LEAD/XSEED to capture tier-2/3 market</p>
+
+                <div class="pricing-band">
+                    <div class="price-tier">
+                        <h4>Free Tier</h4>
+                        <div class="price">$0</div>
+                        <div class="per">Lead Magnet</div>
+                        <ul class="features">
+                            <li>NEP audit (Typeform)</li>
+                            <li>1 teacher workshop</li>
+                            <li>30-day app trial</li>
+                        </ul>
+                    </div>
+
+                    <div class="price-tier">
+                        <h4>Essentials</h4>
+                        <div class="price">Rs 599–799</div>
+                        <div class="per">per student/year</div>
+                        <ul class="features">
+                            <li>4× teacher workshops/year</li>
+                            <li>NEP curriculum guide</li>
+                            <li>WhatsApp support</li>
+                            <li>Target: Small tier-2/3 schools</li>
+                        </ul>
+                    </div>
+
+                    <div class="price-tier recommended">
+                        <h4>Growth (Recommended)</h4>
+                        <div class="price">Rs 999–1,299</div>
+                        <div class="per">per student/year</div>
+                        <ul class="features">
+                            <li>Essentials + all below</li>
+                            <li>Bilingual curriculum content</li>
+                            <li>Parent app + analytics</li>
+                            <li>Target: Mid-market tier-2/3</li>
+                        </ul>
+                    </div>
+
+                    <div class="price-tier">
+                        <h4>Complete</h4>
+                        <div class="price">Rs 1,599–1,999</div>
+                        <div class="per">per student/year</div>
+                        <ul class="features">
+                            <li>Growth + all below</li>
+                            <li>LMS + assessments</li>
+                            <li>Competency mapping</li>
+                            <li>Dedicated success manager</li>
+                        </ul>
+                    </div>
+
+                    <div class="price-tier">
+                        <h4>Enterprise</h4>
+                        <div class="price">Rs 2,000–3,500+</div>
+                        <div class="per">Custom pricing</div>
+                        <ul class="features">
+                            <li>Complete + all below</li>
+                            <li>White-label + multi-branch</li>
+                            <li>Custom curriculum</li>
+                            <li>Target: Chain schools</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="background: #f0f4f8; padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary); margin-top: 20px;">
+                    <h4 style="color: var(--primary); margin-bottom: 10px;">Pricing Strategy Rationale</h4>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>Publish all pricing on website:</strong> Removes negotiation friction for small schools. Incumbents cannot match this transparency without cannibalizing existing contracts.</li>
+                        <li><strong>Per-student model:</strong> Scales fairly with school size. 200-student school pays Rs 1–1.5L/year (affordable). No INR 5+ lakh entry barrier.</li>
+                        <li><strong>Competitive positioning:</strong> Your Tier 2 (Growth) at Rs 999–1,299/student = 35–50% cheaper than LEAD for comparable features.</li>
+                        <li><strong>Payment flexibility:</strong> Annual prepayment (10% discount) + quarterly/termly options align with school fee cycles.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 12-Month Roadmap -->
+            <section>
+                <h2>12-Month Roadmap</h2>
+
+                <div class="roadmap">
+                    <div class="roadmap-phase phase-1">
+                        <h4>🔷 Phase 1: Foundation (Months 1–3)</h4>
+                        <p style="margin-top: 8px; color: var(--text-dark); font-size: 0.95em;">Build product MVP, establish field presence, demonstrate early traction.</p>
+                        <div class="metrics">
+                            <div class="metric-item">
+                                <strong>Schools:</strong> 25 target
+                            </div>
+                            <div class="metric-item">
+                                <strong>Revenue:</strong> INR 15–25L ARR
+                            </div>
+                            <div class="metric-item">
+                                <strong>Cities:</strong> 2 (Jaipur, Nagpur)
+                            </div>
+                            <div class="metric-item">
+                                <strong>Hires:</strong> 4 (2 field reps, 1 curriculum, 1 inside sales)
+                            </div>
+                        </div>
+                        <p style="margin-top: 10px; font-size: 0.9em; color: var(--text-muted);"><strong>Deliverables:</strong> NEP audit tool, Tier 1 Essentials training, 20-school discovery calls, 1 Sahodaya event presentation</p>
+                    </div>
+
+                    <div class="roadmap-phase phase-2">
+                        <h4>🔶 Phase 2: Proof (Months 4–6)</h4>
+                        <p style="margin-top: 8px; color: var(--text-dark); font-size: 0.95em;">Launch Tier 2, publish Teacher NPS, expand to 5 cities, attend national expo.</p>
+                        <div class="metrics">
+                            <div class="metric-item">
+                                <strong>Schools:</strong> 100 target
+                            </div>
+                            <div class="metric-item">
+                                <strong>Revenue:</strong> INR 60–90L ARR
+                            </div>
+                            <div class="metric-item">
+                                <strong>Tier 2+:</strong> 40+ schools on Growth/Complete
+                            </div>
+                            <div class="metric-item">
+                                <strong>Hires:</strong> 3 (1 sales mgr, 1 content, 1 success mgr)
+                            </div>
+                        </div>
+                        <p style="margin-top: 10px; font-size: 0.9em; color: var(--text-muted);"><strong>Deliverables:</strong> Tier 2 Launch, Teacher NPS publication, bilingual curriculum rollout, case study #1–2</p>
+                    </div>
+
+                    <div class="roadmap-phase phase-3">
+                        <h4>🟢 Phase 3: Scale (Months 7–9)</h4>
+                        <p style="margin-top: 8px; color: var(--text-dark); font-size: 0.95em;">Launch Tier 3, expand geographic reach, build content in 2nd language, establish referral program.</p>
+                        <div class="metrics">
+                            <div class="metric-item">
+                                <strong>Schools:</strong> 250 target
+                            </div>
+                            <div class="metric-item">
+                                <strong>Revenue:</strong> INR 1.5–2.5Cr ARR
+                            </div>
+                            <div class="metric-item">
+                                <strong>Tier 2–3:</strong> 80+ schools
+                            </div>
+                            <div class="metric-item">
+                                <strong>Hires:</strong> 4 (1 partnerships head, 2 field reps, 1 PM)
+                            </div>
+                        </div>
+                        <p style="margin-top: 10px; font-size: 0.9em; color: var(--text-muted);"><strong>Deliverables:</strong> Tier 3 Launch, Referral program, 2 Sahodaya presentations/month, case studies #3–9, YouTube channel launch</p>
+                    </div>
+
+                    <div class="roadmap-phase phase-4">
+                        <h4>🟣 Phase 4: Consolidate (Months 10–12)</h4>
+                        <p style="margin-top: 8px; color: var(--text-dark); font-size: 0.95em;">Stabilize Tier 3, pilot Enterprise tier, drive renewals, announce Year 2 geographic expansion.</p>
+                        <div class="metrics">
+                            <div class="metric-item">
+                                <strong>Schools:</strong> 400+ target
+                            </div>
+                            <div class="metric-item">
+                                <strong>Revenue:</strong> INR 3–4Cr ARR
+                            </div>
+                            <div class="metric-item">
+                                <strong>Renewal Rate:</strong> 80%+ target
+                            </div>
+                            <div class="metric-item">
+                                <strong>Hires:</strong> 3 (1 VP Sales, 1 enterprise AM, 1 marketing mgr)
+                            </div>
+                        </div>
+                        <p style="margin-top: 10px; font-size: 0.9em; color: var(--text-muted);"><strong>Deliverables:</strong> Enterprise pilot, 15+ case studies published, 12–15 cities announced, 80%+ renewal push</p>
+                    </div>
+                </div>
+
+                <div style="background: #f0f4f8; padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary); margin-top: 20px;">
+                    <h4 style="color: var(--primary); margin-bottom: 10px;">Key Milestones by Quarter</h4>
+                    <ul style="margin-left: 20px; font-size: 0.95em;">
+                        <li><strong>Q1 (M1–3):</strong> Product MVP, 2-city field presence, 25 schools, first case study pipeline</li>
+                        <li><strong>Q2 (M4–6):</strong> Tier 2 launch, Teacher NPS publication, 100 schools, 2–3 published case studies</li>
+                        <li><strong>Q3 (M7–9):</strong> Tier 3 launch, 250 schools, 2nd language content, 6+ case studies, YouTube channel</li>
+                        <li><strong>Q4 (M10–12):</strong> 400+ schools, INR 3–4Cr ARR, 80%+ renewal rate, 15+ case studies published, geographic expansion announced</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Risk Mitigation -->
+            <section>
+                <h2>Key Risks & Mitigations</h2>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h3 style="color: var(--accent-red);">🔴 Risk 1: Trust Barrier Post-BYJU's</h3>
+                        <p style="margin-top: 10px; font-size: 0.95em;"><strong>Likelihood: High | Impact: High</strong></p>
+                        <p style="margin-top: 10px; font-size: 0.9em; color: var(--text-muted);">Schools remain skeptical of EdTech vendors after high-profile failures.</p>
+                        <p style="margin-top: 10px;"><strong>Mitigation:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 8px; font-size: 0.9em;">
+                            <li>Free NEP audit (zero-risk lead magnet)</li>
+                            <li>Publish lighthouse school outcomes publicly</li>
+                            <li>Secure Sahodaya association endorsements early</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="color: var(--accent-orange);">🟠 Risk 2: Teacher Training Quality at Scale</h3>
+                        <p style="margin-top: 10px; font-size: 0.95em;"><strong>Likelihood: High | Impact: High</strong></p>
+                        <p style="margin-top: 10px; font-size: 0.9em; color: var(--text-muted);">Scaling training from 25 to 400 schools risks inconsistent quality, teacher adoption.</p>
+                        <p style="margin-top: 10px;"><strong>Mitigation:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 8px; font-size: 0.9em;">
+                            <li>Certified city trainer network (not central delivery)</li>
+                            <li>Publish Teacher NPS quarterly (transparency signal)</li>
+                            <li>Video modules for standardization</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="color: var(--accent-orange);">🟠 Risk 3: Competitive Response from Incumbents</h3>
+                        <p style="margin-top: 10px; font-size: 0.95em;"><strong>Likelihood: Medium | Impact: High</strong></p>
+                        <p style="margin-top: 10px; font-size: 0.9em; color: var(--text-muted);">Well-funded competitors (LEAD, Next Education) may copy modular pricing, vernacular content.</p>
+                        <p style="margin-top: 10px;"><strong>Mitigation:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 8px; font-size: 0.9em;">
+                            <li>Move fast in Months 1–6 (first-mover relationships have high switching cost)</li>
+                            <li>Lock in early customers with case studies + social proof before incumbents respond</li>
+                            <li>Modular model is structural moat (unit economics lock prevents incumbent copying)</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="color: var(--accent-orange);">🟠 Risk 4: NEP Urgency Weakens if State Adoption Slows</h3>
+                        <p style="margin-top: 10px; font-size: 0.95em;"><strong>Likelihood: Medium | Impact: Medium</strong></p>
+                        <p style="margin-top: 10px; font-size: 0.9em; color: var(--text-muted);">NEP implementation varies by state; rollback risk if political leadership changes.</p>
+                        <p style="margin-top: 10px;"><strong>Mitigation:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 8px; font-size: 0.9em;">
+                            <li>Build standalone quality outcomes (independent of NEP positioning)</li>
+                            <li>Track state policy monthly; shift to test score improvements if NEP weakens</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="color: var(--accent-red);">🔴 Risk 5: Cash Burn on Field Sales Before Scale</h3>
+                        <p style="margin-top: 10px; font-size: 0.95em;"><strong>Likelihood: Medium | Impact: High</strong></p>
+                        <p style="margin-top: 10px; font-size: 0.9em; color: var(--text-muted);">Hiring field reps in Months 1–2 may burn cash if conversion rates miss targets.</p>
+                        <p style="margin-top: 10px;"><strong>Mitigation:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 8px; font-size: 0.9em;">
+                            <li>Go/no-go gate at Month 3: if &lt;6% field conversion, double down on inside sales + Sahodaya</li>
+                            <li>Use Sahodaya channel first (lower CAC); field sales as supplement, not primary</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conclusion -->
+            <section>
+                <h2>Conclusion</h2>
+                <div style="background: linear-gradient(135deg, #f0fdf4 0%, #f1fdf5 100%); padding: 25px; border-radius: 8px; border-left: 5px solid var(--accent-green);">
+                    <p style="font-size: 1em; line-height: 1.8; color: var(--text-dark); margin-bottom: 15px;">
+                        The India K-12 school services market is in a structural transition: massive TAM (&lt;1% penetration), clear bifurcation into premium and affordable segments, and policy-driven demand (NEP 2020). With funding cooled and consolidation accelerating, first-mover advantage in underserved tier-2/3 segment is now.
+                    </p>
+                    <p style="font-size: 1em; line-height: 1.8; color: var(--text-dark); margin-bottom: 15px;">
+                        <strong>Three evidence-backed differentiation pillars exist:</strong>
+                    </p>
+                    <ol style="margin-left: 20px; font-size: 0.95em; line-height: 1.8;">
+                        <li><strong>Modular pricing (Rs 599–1,299/student)</strong> — 60–70% below LEAD, removes price objection entirely for tier-2 schools</li>
+                        <li><strong>Vernacular NEP compliance</strong> — Zero incumbents serve bilingual content at scale; retrofitting takes 18–24 months</li>
+                        <li><strong>Transparent outcomes + review platform presence</strong> — All competitors invisible on G2, Capterra, Techjockey; first mover owns vendor searches</li>
+                    </ol>
+                    <p style="font-size: 1em; line-height: 1.8; color: var(--text-dark); margin-top: 15px;">
+                        <strong>Realistic 12-month target: 400+ schools, INR 3–4Cr ARR</strong>, with 80%+ renewal rate and geographic expansion into 12–15 cities by Year 1 close. This positions the company for Series A at USD 50–80M valuation (10–15x ARR multiple, sector standard).
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>India K-12 School Services Market — Competitive Intelligence Report | November 23, 2026</p>
+            <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.8;">Data Sources: Mordor Intelligence, IMARC, Tracxn, Inc42, YourStory | Report covers May 2026 baseline + November 2026 Q4 updates</p>
+        </div>
+    </div>
+</body>
+</html>
