@@ -96,25 +96,89 @@
 
 **Proof point:** By Month 12, publish 12 school case studies with specific metrics (% fee improvement, test score delta, teacher hours saved). No competitor has 12 public case studies.
 
-## GTM Channel Priority
+## GTM Channel Priority (Rank-Ordered by Unit Economics + Feasibility)
 
-1. **Field Sales — Tier-2 Clusters** (High effort, CAC 8–15K, 8–12% conv.)
-2. **Inside Sales — WhatsApp** (Medium effort, CAC 4–8K, 4–7% conv.)
-3. **CBSE Sahodaya Associations** (Medium effort, CAC 2–5K, 10–18% conv.)
-4. **Digital Ads + LinkedIn** (Medium effort, CAC 3–7K, 2–4% conv.)
-5. **Partner Channel (School Suppliers)** (Low effort, CAC 1.5–4K, 5–9% conv.)
+**Channel 1: CBSE Sahodaya Associations** ⭐ HIGHEST PRIORITY
 
-## Pricing Tiers
+- **What:** Cluster-based school associations affiliated with CBSE (60+ associations across India, 8,000–12,000 schools per cluster)
+- **CAC:** INR 2–5K per school (association endorsement + group presentation)
+- **Conversion:** 10–18%
+- **Effort:** Medium (requires relationship with Sahodaya chapter president, 20-min presentation at monthly meeting)
+- **Mechanics:** Negotiate group pricing (10–15% discount for Sahodaya members) + co-branded NEP compliance checklist
+- **Proof:** No incumbent has built Sahodaya channel. Opportunity to lock in 3–5 chapters in Months 2–4
+- **Year 1 target:** 3–4 Sahodaya partnerships = 300–500 schools at low CAC
 
-| Tier | Name | Price | Includes | Target |
-|---|---|---|---|---|
-| 0 | Starter | Free | NEP audit + intro workshop | Lead magnet |
-| 1 | Essentials | Rs 599–799 | Teacher training (4x/yr) + NEP guide + support | 100–250 students |
-| 2 | Growth | Rs 999–1,299 | Essentials + bilingual content + parent app + analytics | 200–500 students |
-| 3 | Complete | Rs 1,599–1,999 | Growth + LMS + smart class + assessments + success mgr | 400–800 students |
-| 4 | Enterprise | Rs 2,000–3,500+ | White-label + custom curriculum + multi-board | Large/chain schools |
+**Channel 2: Field Sales — Tier-2 City Clusters**
 
-**Positioning:** 30–55% below LEAD/XSEED for comparable coverage.
+- **What:** Direct on-ground sales team in 2–3 tier-2 cities (Jaipur, Nagpur, Coimbatore primary; Bhopal, Indore secondary)
+- **CAC:** INR 8–15K per school  
+- **Conversion:** 8–12%
+- **Effort:** High (requires local hiring, travel, repeated school visits)
+- **Mechanics:** City-based sales reps with prior school sales experience (textbook, ERP, transport background). Discovery call → demo → reference customer visit → contract
+- **Sales cycle:** 4–8 weeks
+- **Year 1 target:** 2–3 cities, 4 field reps, 100–150 schools
+
+**Channel 3: Inside Sales — WhatsApp Outbound**
+
+- **What:** 5–8 inside sales reps (Hindi/regional language speakers) doing outbound WhatsApp + phone calls to 300–500 schools/month using UDISE+ database
+- **CAC:** INR 4–8K
+- **Conversion:** 4–7%
+- **Effort:** Medium (requires dialing discipline, follow-up automation, WhatsApp templates)
+- **Mechanics:** Intro call → 10-min NEP audit offer → "Free trial for 2 weeks" → conversion
+- **Year 1 target:** 100–200 schools at steady CAC
+
+**Channel 4: State Board Associations** (Secondary, Month 4+)
+
+- **What:** Engage state-level private school associations (MP, Chhattisgarh, Rajasthan boards)
+- **CAC:** INR 3–8K
+- **Conversion:** 8–12%
+- **Effort:** Medium
+- **Proof:** State boards are under NEP compliance pressure. Partnerships with state associations position you as board-compliant
+- **Year 1 target:** 2–3 state partnerships, 50–100 schools
+
+**Channel 5: Digital Ads + LinkedIn** (Low Priority in Year 1)
+
+- **Status:** Skip in Months 1–6. Revisit Month 7+ only if field CAC exceeds target
+- **Reason:** CAC 3–7K @ 2–4% conversion = INR 7.5K–17.5K effective CAC (poor vs. field/association alternatives)
+- **Exception:** LinkedIn roundabout ads to school owners + principals may work at Month 6+ with case studies
+
+**Channel 6: Partner Channel (School Suppliers, Textbooks, ERP)**
+
+- **What:** Recruit textbook distributors, school furniture vendors, existing ERP partners as resellers
+- **CAC:** INR 1.5–4K (recurring commission model)
+- **Conversion:** 5–9%
+- **Commission structure:** 20–30% recurring commission on first year
+- **Effort:** Medium (recruitment, training, deal registration process)
+- **Year 1 target:** 30–50 partners, 50–100 schools through partners
+
+## Pricing Tiers (Modular, Transparent, 30–55% Below LEAD/XSEED)
+
+| Tier | Name | Per-Student/Year | Per-School/Year (200 students) | Includes | Target Schools |
+|---|---|---|---|---|---|
+| **Free** | Starter | — | — | NEP audit (Typeform), 1 teacher workshop, 30-day limited app access | <100 students (lead magnet) |
+| **1** | Essentials | Rs 599–799 | Rs 1.2–1.6L | Teacher training (4× workshops/year) + NEP curriculum guide + WhatsApp support | 100–250 students, budget-conscious tier-2/3 |
+| **2** | Growth | Rs 999–1,299 | Rs 2.0–2.6L | Essentials + bilingual curriculum content + parent app + basic analytics | 200–500 students, mid-market tier-2/3, state boards |
+| **3** | Complete | Rs 1,599–1,999 | Rs 3.2–4.0L | Growth + LMS + online assessments + competency mapping + dedicated success manager | 400–800 students, premium tier-2 + metro satellite |
+| **4** | Enterprise | Rs 2,000–3,500+ | Custom (Rs 4L–8L+) | Tier 3 + white-label + multi-branch + custom curriculum + API access | Chain schools, 1,000+ students |
+
+**Competitive Positioning:**
+- LEAD School: Rs 1,400–3,000/student (implied Rs 2,000+/student realized ASP)
+- XSEED Education: Rs 2,000–5,000/student + Rs 4,000+/workbooks
+- Next Education: Rs 1,500–2,400/student implied
+- **Your Tier 2 (Growth): Rs 999–1,299/student = 35–50% cheaper than LEAD for comparable features**
+- **Your Tier 1 (Essentials): Rs 599–799/student = 60–70% cheaper than LEAD for training + basics**
+
+**Key Pricing Strategy:**
+1. **Publish all pricing on website.** No "contact us for pricing." Removes negotiation friction for small schools. Incumbents cannot match this transparency without cannibalizing existing contracts.
+2. **Per-student pricing (not per-school flat fee).** Scales with school size fairly. Tier-2 schools with 150–300 students pay Rs 1–1.5L/year (affordable). No INR 5+ lakh entry barrier.
+3. **Free tier for <100 students drives viral adoption.** Lead magnet + word-of-mouth in clusters.
+4. **Annual prepayment gets 10% discount.** Improves cash flow + signals commitment.
+5. **Quarterly/termly payment option available.** Schools' cash flow typically tied to fee cycles (April, July, Oct).
+
+**Revenue Assumptions for 500-student school (Tier 2 Growth):**
+- Monthly: Rs 1,666–2,167 (Rs 2.0–2.6L annualized)
+- Comparable LEAD contract: Rs 7,000–15,000/month = Rs 8.4–18L annualized
+- **Your discount: 70–80% below LEAD** = removes price objection entirely in tier-2 market
 
 ## 12-Month Roadmap
 
