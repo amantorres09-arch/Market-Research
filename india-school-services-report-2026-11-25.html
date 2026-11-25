@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India K-12 EdTech Competitive Analysis Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e40af;
+            --primary-light: #3b82f6;
+            --primary-dark: #1e3a8a;
+            --accent: #0891b2;
+            --accent-light: #06b6d4;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --text-primary: #111827;
+            --text-secondary: #4b5563;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --border-color: #e5e7eb;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) {
+                --text-primary: #f9fafb;
+                --text-secondary: #d1d5db;
+                --bg-primary: #111827;
+                --bg-secondary: #1f2937;
+                --border-color: #374151;
+            }
+        }
+
+        :root[data-theme="dark"] {
+            --text-primary: #f9fafb;
+            --text-secondary: #d1d5db;
+            --bg-primary: #111827;
+            --bg-secondary: #1f2937;
+            --border-color: #374151;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            padding: 0;
+            margin: 0;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .header .meta {
+            font-size: 0.95rem;
+            opacity: 0.95;
+            margin-top: 1rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--accent-light);
+            padding-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: var(--primary-light);
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .executive-summary {
+            background: linear-gradient(135deg, #ecf0f1 0%, #f8f9fa 100%);
+            border-left: 4px solid var(--accent);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .executive-summary:not([data-theme="light"]) {
+                background: linear-gradient(135deg, #1a2332 0%, #0f1419 100%);
+            }
+        }
+
+        :root[data-theme="dark"] .executive-summary {
+            background: linear-gradient(135deg, #1a2332 0%, #0f1419 100%);
+        }
+
+        .key-findings {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .finding-card {
+            background: var(--bg-secondary);
+            border: 2px solid var(--accent-light);
+            border-radius: 6px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent);
+        }
+
+        .finding-card strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        thead {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+            color: white;
+        }
+
+        th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        tbody tr:hover {
+            background-color: var(--accent-light);
+            opacity: 0.1;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .recommendations-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #fff8e1 100%);
+            border: 2px solid var(--warning);
+            border-left: 4px solid var(--warning);
+            border-radius: 6px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .recommendations-box:not([data-theme="light"]) {
+                background: linear-gradient(135deg, #663c00 0%, #4d2e00 100%);
+                border-color: #f59e0b;
+            }
+        }
+
+        :root[data-theme="dark"] .recommendations-box {
+            background: linear-gradient(135deg, #663c00 0%, #4d2e00 100%);
+            border-color: #f59e0b;
+        }
+
+        .recommendations-box h3 {
+            color: var(--warning);
+            margin-top: 0;
+        }
+
+        .recommendations-box ul {
+            margin-left: 1.5rem;
+            line-height: 2;
+        }
+
+        .recommendations-box li {
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .metric-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .metric-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .metric-box .value {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0.5rem 0;
+        }
+
+        .metric-box .label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .gap-analysis {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--success);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .gap-analysis strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background: var(--gray-800);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            border-top: 4px solid var(--accent);
+            font-size: 0.9rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .footer:not([data-theme="light"]) {
+                background: var(--gray-900);
+            }
+        }
+
+        :root[data-theme="dark"] .footer {
+            background: var(--gray-900);
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+            line-height: 1.8;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--primary-light);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .badge.success {
+            background: var(--success);
+        }
+
+        .badge.warning {
+            background: var(--warning);
+        }
+
+        .badge.danger {
+            background: var(--danger);
+        }
+
+        ul {
+            margin-left: 1.5rem;
+            line-height: 1.8;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .pricing-tier {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .tier-card {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .tier-card:hover {
+            border-color: var(--accent-light);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .tier-card .tier-name {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .tier-card .tier-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .tier-card .tier-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .data-confidence {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .data-confidence strong {
+            color: var(--primary);
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            section {
+                page-break-inside: avoid;
+                box-shadow: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.75rem;
+            }
+            .container {
+                padding: 1rem;
+            }
+            section {
+                padding: 1.5rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            table {
+                font-size: 0.85rem;
+            }
+            th, td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>India K-12 EdTech Competitive Analysis</h1>
+        <div class="meta">
+            <strong>Report Date:</strong> November 25, 2026<br>
+            <strong>Analysis Period:</strong> 2024–2026 | <strong>Competitors Analyzed:</strong> 7 Major Players<br>
+            <strong>Market Scope:</strong> K-12 Digital Learning, Smart Classrooms, Teacher Training, School Management Solutions
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- EXECUTIVE SUMMARY -->
+        <section class="executive-summary">
+            <h2>Executive Summary</h2>
+
+            <h3>Market Opportunity Overview</h3>
+            <p>India's K-12 EdTech market is experiencing a critical inflection point. The sector has grown to <strong>USD 4.74 billion (2026)</strong> and is projected to reach <strong>USD 13.22 billion by 2032</strong> at a CAGR of 18.62%. This represents a maturing market transitioning from rapid funding-driven growth (2020–2022) to sustainable profitability and market consolidation.</p>
+
+            <div class="metric-row">
+                <div class="metric-box">
+                    <div class="label">Market Size 2026</div>
+                    <div class="value">$4.74B</div>
+                </div>
+                <div class="metric-box">
+                    <div class="label">Projected 2032</div>
+                    <div class="value">$13.22B</div>
+                </div>
+                <div class="metric-box">
+                    <div class="label">CAGR</div>
+                    <div class="value">18.62%</div>
+                </div>
+                <div class="metric-box">
+                    <div class="label">Competitors Analyzed</div>
+                    <div class="value">7</div>
+                </div>
+            </div>
+
+            <h3>Key Findings Across All Dimensions</h3>
+            <div class="key-findings">
+                <div class="finding-card">
+                    <strong>Market Consolidation Phase</strong>
+                    Shift from funding-led to profitability-driven model. EdTech funding peaked at $4.1B (2021), fell to $321M (2023), recovered to $214M YTD 2026. Only well-capitalized players survive.
+                </div>
+                <div class="finding-card">
+                    <strong>Pricing Opacity as Market Norm</strong>
+                    All major vendors use custom, negotiated pricing with zero transparency. Per-student annual cost ranges Rs 500–5,000. This fragmentation creates opportunity for transparent, standardized pricing.
+                </div>
+                <div class="finding-card">
+                    <strong>Reputation & Reviews Gap</strong>
+                    No competitor has meaningful presence on review platforms. Google removed school reviews (April 2025). First-mover advantage for building review credibility is entirely open.
+                </div>
+                <div class="finding-card">
+                    <strong>Tier-2/3 Market Underserved</strong>
+                    150,000–200,000 small schools with Rs 500–2,500/student/year budget have zero credible partner. This is the highest-ROI entry wedge for new entrants.
+                </div>
+                <div class="finding-card">
+                    <strong>NEP 2020 Urgency</strong>
+                    Government mandate for mother-tongue instruction through Grade 5. Only 22.9% of Grade 5 vernacular students read English sentences. No premium provider owns the "NEP compliance" positioning.
+                </div>
+                <div class="finding-card">
+                    <strong>Modular Adoption Barrier</strong>
+                    Post-BYJU's crisis, principals are risk-averse to full-stack lock-in contracts. No incumbent offers genuine "start small, add later" pricing. This is a structural moat opportunity.
+                </div>
+            </div>
+
+            <h3>Top 3 Strategic Recommendations</h3>
+            <ol style="line-height: 2; margin-left: 1.5rem;">
+                <li><strong>Target Tier-2/3 Affordability Wedge:</strong> Build "Start Small, Grow With Us" positioning at Rs 599–1,999/student/year. Capture the 150K–200K school market ignored by LEAD ($13.22B opportunity). Differentiation: modular, transparent pricing vs. incumbent full-stack lock-in.</li>
+                <li><strong>Become the NEP Compliance Partner:</strong> Position as "NEP Readiness in 60 Days" with bilingual content + vernacular curriculum mapping. This is a 18–24 month retrofit for incumbents; first-mover advantage is structural. Proof point: 3–5 schools with published outcome improvements.</li>
+                <li><strong>Build Review & Reputation Authority First:</strong> Publish 60+ Google reviews, 36+ Software Suggest, 24+ TechJockey within 12 months. No competitor has meaningful platform presence. This creates unassailable social proof and 30–40% lower CAC than field sales alone.</li>
+            </ol>
+        </section>
+
+        <!-- SECTION 1: MARKET LANDSCAPE -->
+        <section>
+            <h2>1. Market Landscape Analysis</h2>
+
+            <h3>Market Size & Segments (2024–2026)</h3>
+
+            <div class="metric-row">
+                <div class="metric-box">
+                    <div class="label">K-12 EdTech 2026</div>
+                    <div class="value">$4.74B</div>
+                </div>
+                <div class="metric-box">
+                    <div class="label">Broader EdTech 2025</div>
+                    <div class="value">$8.88B</div>
+                </div>
+                <div class="metric-box">
+                    <div class="label">Projected 2030</div>
+                    <div class="value">$19B</div>
+                </div>
+                <div class="metric-box">
+                    <div class="label">Historical Peak (2021)</div>
+                    <div class="value">$4.1B</div>
+                </div>
+            </div>
+
+            <h3>Competitor Positioning Matrix</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Market Focus</th>
+                        <th>Key Positioning</th>
+                        <th>Recent Signals (2024–2026)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>LEAD School</strong></td>
+                        <td>Affordable private school chains</td>
+                        <td>Transforming small-town schools; pursuing govt. contracts</td>
+                        <td><span class="badge success">Series E $100M</span> Unicorn status; targeting govt. partnerships</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Next Education</strong></td>
+                        <td>K-12 integrated solutions</td>
+                        <td>B2B SaaS platform; 360° digital + academic services</td>
+                        <td>5X revenue growth target; reached 12M students, 240K teachers, 18K schools</td>
+                    </tr>
+                    <tr>
+                        <td><strong>XSEED Education</strong></td>
+                        <td>Curriculum + teacher training</td>
+                        <td>Focus on learning outcomes & post-COVID recovery</td>
+                        <td>61K students with 31% YoY improvement; 2M+ children served across 8 countries</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tata ClassEdge</strong></td>
+                        <td>Smart classroom + skill development</td>
+                        <td>Tata Group subsidiary; B2B platform for schools</td>
+                        <td>3 major partnerships (2025–26); experience centres; 1.25L teachers, 1.5M students</td>
+                    </tr>
+                    <tr>
+                        <td><strong>iDream Education</strong></td>
+                        <td>Digital classroom + content</td>
+                        <td>NCERT & state board content in 11 languages</td>
+                        <td>Used in 25K+ classrooms; embedded in school systems; IIT Bombay validation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Extramarks</strong></td>
+                        <td>Multi-segment (learning app, test prep, smart class)</td>
+                        <td>Broad K-12 coverage; navigating profitability</td>
+                        <td><span class="badge warning">FY24: -37% revenue</span> AI offerings + K-5 book series (2025)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pearson India</strong></td>
+                        <td>Test prep, study solutions, partnerships</td>
+                        <td>Global education publisher; India focus</td>
+                        <td>AI-driven test series (Infinity Learn partnership, Mar 2026); investment pipeline active</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Market Trends & Drivers (3–5 Key Factors)</h3>
+
+            <div class="gap-analysis">
+                <strong>1. Consolidation Over Burn</strong>
+                Market has shifted from funding-led growth (2021 peak at $4.1B) to sustainable profitability and model consolidation. Only a few players can compete across segments; smaller edtech companies face pressure.
+            </div>
+
+            <div class="gap-analysis">
+                <strong>2. Government & Institutional Partnerships</strong>
+                Government free competitive exam coaching programs (Aug 2026) intensify direct competition. LEAD and others pursuing govt. school contracts as growth path.
+            </div>
+
+            <div class="gap-analysis">
+                <strong>3. Regional Language & Affordability</strong>
+                Growth in tier-2/3 cities driven by regional-language content (11+ languages), instalmental payment models, and trust in YouTube-based learning. Vernacular curriculum expansion is table stakes.
+            </div>
+
+            <div class="gap-analysis">
+                <strong>4. AI & Outcomes Focus</strong>
+                Shift from digital-first hype to measurable learning outcomes. AI-powered personalization, test prep, and analytics becoming standard. Companies emphasizing post-COVID learning recovery.
+            </div>
+
+            <div class="gap-analysis">
+                <strong>5. Hybrid Models</strong>
+                Blending offline (physical centres, teacher training) + online (SaaS, app-based) to build stickiness. Physical experience centres and partnerships with ground-based organizations signal maturation.
+            </div>
+        </section>
+
+        <!-- SECTION 2: SERVICES & PRICING ANALYSIS -->
+        <section>
+            <h2>2. Services & Pricing Comparison Analysis</h2>
+
+            <h3>Pricing Model Summary</h3>
+            <p><strong>Critical Finding:</strong> All five major vendors use custom, negotiated pricing with <strong>zero published rate cards</strong>. This opacity creates significant friction for school procurement and opportunity for transparent new entrants.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Pricing Model</th>
+                        <th>Estimated Annual Range (Per School)</th>
+                        <th>Contract Term</th>
+                        <th>Free Trial</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>LEAD School</strong></td>
+                        <td>Custom per-student or per-school</td>
+                        <td>Rs 1,400–3,000/student/year</td>
+                        <td>Annual</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Next Education</strong></td>
+                        <td>Per-school flat fee or per-user hybrid</td>
+                        <td>Rs 3–12 lakh/school</td>
+                        <td>1–3 years</td>
+                        <td><span class="badge success">Yes</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>XSEED Education</strong></td>
+                        <td>License + materials (workbooks)</td>
+                        <td>Rs 1–5 lakh/school + Rs 4,000+/student</td>
+                        <td>Annual</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tata ClassEdge</strong></td>
+                        <td>Hardware-bundled (interactive panels + software)</td>
+                        <td>Rs 5 lakh–80 lakh (highly variable)</td>
+                        <td>3–5 years</td>
+                        <td><span class="badge warning">On request</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Extramarks</strong></td>
+                        <td>Tiered SaaS (Basic/Advanced/Pro)</td>
+                        <td>Rs 50K–5+ lakh</td>
+                        <td>Annual subscription</td>
+                        <td><span class="badge warning">On request</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Feature Differentiation Matrix</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>LEAD</th>
+                        <th>Next Education</th>
+                        <th>XSEED</th>
+                        <th>Tata ClassEdge</th>
+                        <th>Extramarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Curriculum Replacement</strong></td>
+                        <td><span class="badge success">Full</span></td>
+                        <td>Partial</td>
+                        <td>Overlay only</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Printed Materials Included</strong></td>
+                        <td><span class="badge success">Yes</span></td>
+                        <td><span class="badge success">Yes</span></td>
+                        <td><span class="badge success">Yes (workbooks)</span></td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Teacher Training Depth</strong></td>
+                        <td><span class="badge success">High</span></td>
+                        <td>Moderate</td>
+                        <td><span class="badge success">High</span></td>
+                        <td>Moderate</td>
+                        <td>Low–Moderate</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Adaptive/AI Learning</strong></td>
+                        <td>Partial</td>
+                        <td>Partial</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td><span class="badge success">Yes (2025)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hardware Bundled</strong></td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td><span class="badge warning">Yes (lock-in risk)</span></td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Modular/Flexible Pricing</strong></td>
+                        <td>No</td>
+                        <td>Partial</td>
+                        <td>Partial</td>
+                        <td>No</td>
+                        <td><span class="badge success">Yes (tiers)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Published Pricing</strong></td>
+                        <td><span class="badge danger">No</span></td>
+                        <td><span class="badge danger">No</span></td>
+                        <td><span class="badge danger">No</span></td>
+                        <td><span class="badge danger">No</span></td>
+                        <td><span class="badge danger">No</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Key Pricing Insights & Warnings</h3>
+
+            <div class="gap-analysis">
+                <strong>Warning 1: Pricing Opacity is Universal</strong>
+                All five vendors practice non-transparent, negotiated pricing. Schools cannot compare costs publicly. Smaller schools lack procurement leverage.
+            </div>
+
+            <div class="gap-analysis">
+                <strong>Finding 2: Per-Student Cost Range</strong>
+                Implied per-student annual cost (where estimable): Rs 500–5,000 per year, depending on school size, board, and feature set.
+            </div>
+
+            <div class="gap-analysis">
+                <strong>Warning 3: Hidden Material Costs</strong>
+                XSEED and others include printed workbooks, adding Rs 3,000–5,000 per student per year. These are often not highlighted upfront, creating budget surprises.
+            </div>
+
+            <div class="gap-analysis">
+                <strong>Warning 4: Hardware Lock-In Risk (Tata ClassEdge)</strong>
+                Hardware-bundled contracts with 3–5 year terms create significant switching costs. Schools report difficulty recovering hardware ownership at contract end.
+            </div>
+        </section>
+
+        <!-- SECTION 3: REVIEWS & REPUTATION ANALYSIS -->
+        <section>
+            <h2>3. Competitor Reputation & Reviews Analysis</h2>
+
+            <h3>Review Platform Presence Audit (2026)</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Google Business</th>
+                        <th>Software Suggest</th>
+                        <th>TechJockey</th>
+                        <th>JustDial</th>
+                        <th>Overall Assessment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>LEAD School</strong></td>
+                        <td>Not built</td>
+                        <td>Not listed</td>
+                        <td>Not listed</td>
+                        <td>Minimal</td>
+                        <td><span class="badge danger">Very Low</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Next Education</strong></td>
+                        <td>Not built</td>
+                        <td>Listed (ERP)</td>
+                        <td>Not listed</td>
+                        <td>3.7/5 (103 ratings)</td>
+                        <td><span class="badge warning">Highest of incumbents</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>XSEED Education</strong></td>
+                        <td>Not built</td>
+                        <td>Not listed</td>
+                        <td>Not listed</td>
+                        <td>44 ratings (local)</td>
+                        <td><span class="badge danger">Very Low</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tata ClassEdge</strong></td>
+                        <td>Not built</td>
+                        <td>Listed</td>
+                        <td>Listed</td>
+                        <td>Minimal</td>
+                        <td><span class="badge warning">Low</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>iDream Education</strong></td>
+                        <td>Not built</td>
+                        <td>Not listed</td>
+                        <td>Not listed</td>
+                        <td>Not tracked</td>
+                        <td><span class="badge danger">Very Low</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="data-confidence">
+                <strong>Critical Finding (April 2025):</strong> Google removed school institution reviews, eliminating legacy review data. <strong>All vendors can register as "Software Company" to remain eligible.</strong> This creates a level playing field for new entrants.
+            </div>
+
+            <h3>Customer Satisfaction Themes</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Positive Themes (Praise)</th>
+                        <th>Negative Themes (Complaints)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>LEAD</strong></td>
+                        <td>Full-stack integration; performance guarantees; unicorn brand</td>
+                        <td>Customer service unavailable after 6pm; app bugs; aggressive marketing</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Next Education</strong></td>
+                        <td>Good curriculum mapping; support availability; social proof from scale</td>
+                        <td>Post-sale support dropout; high-pressure sales; staff turnover (34% employee recommendation)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>XSEED</strong></td>
+                        <td>Independent thinking in students; conceptual learning; teacher confidence</td>
+                        <td>Quality vs. growth trade-offs; rigid lesson plans; high cost</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tata ClassEdge</strong></td>
+                        <td>Tata brand trust; study material quality; ease of use</td>
+                        <td>Contract misrepresentation on hardware ownership; no offline access</td>
+                    </tr>
+                    <tr>
+                        <td><strong>iDream</strong></td>
+                        <td>Student engagement; multilingual support; measurable outcomes (30% pass rate improvement)</td>
+                        <td>Too few reviews to establish patterns</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Three Major Reputation Gaps (Opportunity for New Entrant)</h3>
+
+            <div class="gap-analysis">
+                <strong>Gap 1: No Third-Party Review Platform Presence</strong>
+                No competitor owns any meaningful review platform. First 10 reviews on Software Suggest puts new entrant ahead of all incumbents. This is entirely addressable in 60–90 days.
+            </div>
+
+            <div class="gap-analysis">
+                <strong>Gap 2: No Case Study Framework for School Owners</strong>
+                All competitors focus on student learning outcomes, not school enrolment, parent satisfaction, or fee realisation. School owners (real buyers) have no case studies addressing their business concerns.
+            </div>
+
+            <div class="gap-analysis">
+                <strong>Gap 3: Post-Sale Support as Universal Pain Point</strong>
+                "Customer service unavailable after 6pm," "post-sale support dropout," "staff turnover" are common complaints. Published "4-hour response SLA" with named support head becomes a genuine differentiator.
+            </div>
+
+            <h3>90-Day Reputation Playbook for New Entrant</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time Period</th>
+                        <th>Google</th>
+                        <th>Software Suggest</th>
+                        <th>TechJockey</th>
+                        <th>Total Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Month 1</strong></td>
+                        <td>3 reviews</td>
+                        <td>5 reviews</td>
+                        <td>3 reviews</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Month 2</strong></td>
+                        <td>5 reviews</td>
+                        <td>5 reviews</td>
+                        <td>3 reviews</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Month 3</strong></td>
+                        <td>5 reviews</td>
+                        <td>5 reviews</td>
+                        <td>4 reviews</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Year 1 Target</strong></td>
+                        <td>60 (4.4+ rating)</td>
+                        <td>36</td>
+                        <td>24</td>
+                        <td>120</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>Key Insight:</strong> Draft testimonials FOR principals using their own words. Approval rate: 70–80% vs. under 20% for blank-page requests. This is the differentiator in execution.</p>
+        </section>
+
+        <!-- SECTION 4: MARKET ENTRY STRATEGY -->
+        <section>
+            <h2>4. Market Entry Strategy & Opportunity Assessment</h2>
+
+            <h3>Three Major Market Gaps (Priority Ranked)</h3>
+
+            <div class="gap-analysis">
+                <strong>Gap 1 (HIGHEST PRIORITY): Affordable Full-Service Partnership</strong>
+                <p><strong>Evidence:</strong> India K-12 market is USD 103B (2025), growing 11.57% CAGR. Tier-2/3 schools budget: INR 500–2,500/student/year for external services. No credible full-service provider currently serves this segment.</p>
+                <p><strong>Opportunity Size:</strong> 150,000–200,000 small tier-2/3 schools underserved. At INR 800/student/year across 200-student school = INR 1.6 lakh ARR per school. 5,000 schools = INR 80 crore ARR market.</p>
+                <p><strong>Why This Matters:</strong> LEAD and Next Education require full-stack upfront commitment. This creates pricing power for modular, transparent new entrant.</p>
+            </div>
+
+            <div class="gap-analysis">
+                <strong>Gap 2: Modular Adoption vs. Full-School Lock-In</strong>
+                <p><strong>Evidence:</strong> Post-BYJU's, principals saw locked-in platforms fail and support vanish. No player offers genuine modular, transparent per-service pricing.</p>
+                <p><strong>Opportunity:</strong> Schools buy one module, experience value, upsell naturally to additional modules. This "Start Small, Grow With Us" model removes the #1 adoption barrier.</p>
+                <p><strong>Why Incumbents Can't Copy:</strong> Unit economics built around full-school contracts. Fragmenting cannibalizes ACV for LEAD, XSEED.</p>
+            </div>
+
+            <div class="gap-analysis">
+                <strong>Gap 3: NEP 2020 Compliance + Vernacular Content</strong>
+                <p><strong>Evidence:</strong> NEP mandates mother-tongue instruction through Grade 5. Only 22.9% of Grade 5 students in vernacular schools read English sentences. LEAD and XSEED deliver English-medium content, misaligned with NEP vernacular mandate.</p>
+                <p><strong>Opportunity:</strong> "NEP Compliance in 60 Days" positioning (curriculum mapping + bilingual content + teacher training). No incumbent owns this.</p>
+                <p><strong>Why Incumbents Can't Copy:</strong> Retrofitting bilingual pedagogy across libraries is 18–24 month project.</p>
+            </div>
+
+            <h3>Recommended Pricing Tiers for Entry</h3>
+
+            <div class="pricing-tier">
+                <div class="tier-card">
+                    <div class="tier-name">Starter</div>
+                    <div class="tier-price">Free</div>
+                    <div class="tier-desc">NEP audit + intro workshop | Lead magnet</div>
+                </div>
+                <div class="tier-card">
+                    <div class="tier-name">Essentials</div>
+                    <div class="tier-price">Rs 599–799</div>
+                    <div class="tier-desc">Teacher training (4x/yr) + NEP guide + support | 100–250 students</div>
+                </div>
+                <div class="tier-card">
+                    <div class="tier-name">Growth</div>
+                    <div class="tier-price">Rs 999–1,299</div>
+                    <div class="tier-desc">Essentials + bilingual content + parent app + analytics | 200–500 students</div>
+                </div>
+                <div class="tier-card">
+                    <div class="tier-name">Complete</div>
+                    <div class="tier-price">Rs 1,599–1,999</div>
+                    <div class="tier-desc">Growth + LMS + smart class + assessments + success mgr | 400–800 students</div>
+                </div>
+                <div class="tier-card">
+                    <div class="tier-name">Enterprise</div>
+                    <div class="tier-price">Rs 2,000–3,500+</div>
+                    <div class="tier-desc">White-label + custom curriculum + multi-board | Large/chain schools</div>
+                </div>
+            </div>
+
+            <p><strong>Positioning:</strong> 30–55% below LEAD/XSEED for comparable coverage. Transparent, modular pricing vs. incumbent opacity.</p>
+
+            <h3>Go-To-Market (GTM) Channel Priority</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Channel</th>
+                        <th>Effort Level</th>
+                        <th>CAC (INR)</th>
+                        <th>Conversion Rate</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Field Sales – Tier-2 Clusters</strong></td>
+                        <td>High</td>
+                        <td>8,000–15,000</td>
+                        <td>8–12%</td>
+                        <td>Large school clusters; tier-2 cities</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Inside Sales – WhatsApp</strong></td>
+                        <td>Medium</td>
+                        <td>4,000–8,000</td>
+                        <td>4–7%</td>
+                        <td>High-volume outreach; warm leads</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CBSE Sahodaya Associations</strong></td>
+                        <td>Medium</td>
+                        <td>2,000–5,000</td>
+                        <td>10–18%</td>
+                        <td><span class="badge success">Highest ROI</span> School networks; institutional trust</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Digital Ads + LinkedIn</strong></td>
+                        <td>Medium</td>
+                        <td>3,000–7,000</td>
+                        <td>2–4%</td>
+                        <td>Brand awareness; long-tail reach</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Partner Channel (School Suppliers)</strong></td>
+                        <td>Low</td>
+                        <td>1,500–4,000</td>
+                        <td>5–9%</td>
+                        <td>Distribution leverage; existing relationships</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>12-Month Roadmap</h3>
+
+            <div class="gap-analysis">
+                <strong>Phase 1 (Month 1–3): Foundation</strong>
+                <p>Product: NEP audit, Tier 1 Essentials (4 training modules)<br>
+                Market: Field sales Jaipur + Nagpur, WhatsApp 300 schools, 1 Sahodaya event<br>
+                Target: 25 schools, INR 15–25L ARR, 2 cities<br>
+                Hires: 2 field reps, 1 curriculum lead, 1 inside sales</p>
+            </div>
+
+            <div class="gap-analysis">
+                <strong>Phase 2 (Month 4–6): Proof</strong>
+                <p>Product: Tier 2 Growth (bilingual content, parent app, analytics)<br>
+                Market: Expand to 5 cities, 1 national expo, publish Teacher NPS, Google Ads<br>
+                Target: 100 schools, 40+ on Tier 2, INR 60–90L ARR<br>
+                Hires: 1 regional sales manager, 1 content specialist, 1 success manager</p>
+            </div>
+
+            <div class="gap-analysis">
+                <strong>Phase 3 (Month 7–9): Scale</strong>
+                <p>Product: Tier 3 Complete (LMS, assessment, competency), 2nd language<br>
+                Market: Referral program, 2 Sahodaya presentations/month, LinkedIn + YouTube<br>
+                Target: 250 schools, 80+ Tier 2–3, INR 1.5–2.5Cr ARR<br>
+                Hires: 1 partnerships head, 2 field reps, 1 product manager</p>
+            </div>
+
+            <div class="gap-analysis">
+                <strong>Phase 4 (Month 10–12): Consolidate</strong>
+                <p>Product: Tier 3 stable, Enterprise Tier 4 pilot, school health scoring<br>
+                Market: Year 2 renewal push (80%+ target), announce 15+ cities<br>
+                Target: 400+ schools, INR 3–4Cr ARR, 12–15 cities, 80%+ renewal<br>
+                Hires: VP Sales, 1 enterprise account mgr, 1 marketing manager</p>
+            </div>
+
+            <h3>Top 5 Risks & Mitigations</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Risk</th>
+                        <th>Likelihood</th>
+                        <th>Impact</th>
+                        <th>Mitigation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Trust barrier post-BYJU's</td>
+                        <td><span class="badge danger">High</span></td>
+                        <td><span class="badge danger">High</span></td>
+                        <td>Free NEP audit (zero-risk); lighthouse schools for outcomes; Sahodaya endorsement</td>
+                    </tr>
+                    <tr>
+                        <td>Teacher training quality at scale</td>
+                        <td><span class="badge danger">High</span></td>
+                        <td><span class="badge danger">High</span></td>
+                        <td>Certified city trainer network; video modules; publish Teacher NPS quarterly</td>
+                    </tr>
+                    <tr>
+                        <td>Competitive response from incumbents</td>
+                        <td><span class="badge warning">Medium</span></td>
+                        <td><span class="badge danger">High</span></td>
+                        <td>Move fast Months 1–6; first-mover relationships have high switching cost; modular model structural moat</td>
+                    </tr>
+                    <tr>
+                        <td>NEP urgency weakens if state adoption slows</td>
+                        <td><span class="badge warning">Medium</span></td>
+                        <td><span class="badge warning">Medium</span></td>
+                        <td>Build standalone quality outcomes; track state policy monthly</td>
+                    </tr>
+                    <tr>
+                        <td>Cash burn on field sales before scale</td>
+                        <td><span class="badge warning">Medium</span></td>
+                        <td><span class="badge danger">High</span></td>
+                        <td>Go/no-go gate at Month 3 (if &lt;6% field conversion, double down on inside sales)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- STRATEGIC RECOMMENDATIONS CALLOUT -->
+        <div class="recommendations-box">
+            <h3>Strategic Recommendations & Competitive Positioning</h3>
+
+            <h4>Key Market Gaps Identified</h4>
+            <ul>
+                <li><strong>Pricing Transparency Gap:</strong> All incumbents use opaque, negotiated pricing. Schools cannot benchmark costs or make informed comparisons. Transparent per-student tiers (Rs 599–1,999) become a category differentiator.</li>
+                <li><strong>Modular Adoption Gap:</strong> Post-BYJU's, schools are risk-averse to full-stack lock-in contracts. No incumbent offers genuine "start small, add more" pricing. This is a structural moat.</li>
+                <li><strong>NEP 2020 Compliance Gap:</strong> Government mandate for mother-tongue instruction through Grade 5 is unserved by premium providers. "NEP Compliance in 60 Days" positioning is immediately credible.</li>
+                <li><strong>Reputation & Reviews Gap:</strong> No competitor has meaningful presence on third-party review platforms. Google removed school reviews (April 2025). First-mover advantage for building review credibility is entirely open.</li>
+                <li><strong>Tier-2/3 Affordability Gap:</strong> 150,000–200,000 small schools with Rs 500–2,500/student/year budget have zero credible partner. This is the highest-ROI entry wedge, with INR 80 crore ARR opportunity.</li>
+            </ul>
+
+            <h4>Our Differentiation Pillars (vs. Incumbents)</h4>
+            <ul>
+                <li><strong>Pillar 1: "Start Small, Grow With Us"</strong><br>
+                Schools choose exactly what they need, pay only for that, add more on their own terms. Why incumbents can't copy: Unit economics built around full-school contracts.</li>
+                <li><strong>Pillar 2: NEP 2020 Compliance Partner</strong><br>
+                "From Anxious to Ready in 60 Days." Why incumbents can't copy: Retrofitting bilingual pedagogy is 18–24 month project. We own this positioning first.</li>
+                <li><strong>Pillar 3: Published Teacher NPS & Outcome Data</strong><br>
+                Only company publishing quarterly Teacher NPS scores and school outcome data. Why incumbents can't copy: Public accountability. Those with delivery issues cannot credibly adopt.</li>
+                <li><strong>Pillar 4: Reputation & Trust Authority</strong><br>
+                Build 60+ Google reviews, 36+ Software Suggest, 24+ TechJockey within 12 months. No competitor has meaningful platform presence. This creates 30–40% lower CAC.</li>
+            </ul>
+
+            <h4>Recommended GTM Approach (Phase 1: 0–3 Months)</h4>
+            <ul>
+                <li><strong>Week 1–2:</strong> Run 20-school discovery call sprint (Jaipur, Nagpur, Coimbatore, Bhopal). Understand: biggest headache? EdTech regretted? What makes you try new provider?</li>
+                <li><strong>Week 2–4:</strong> Build NEP Readiness Audit (15 questions, Typeform, auto-gap report). Lead magnet + needs assessment. This is the trust-builder.</li>
+                <li><strong>Week 2–5:</strong> Hire 2 city-based field sales reps. Prior school sales experience (textbook, ERP, transport) required. Target: Jaipur + Nagpur.</li>
+                <li><strong>Week 3–6:</strong> Approach 3 CBSE Sahodaya chapters (Kolkata, Bhopal, Karnal) for presentation slots. One 20-min talk = 3–4 weeks cold outreach. This channel has 10–18% conversion.</li>
+                <li><strong>Week 4–8:</strong> Enroll 3–5 lighthouse schools. Offer Tier 2 Growth free Year 1 in exchange for: feedback, surveys, public sharing (quotes, case study, video). These become your proof points.</li>
+            </ul>
+
+            <h4>Critical Success Factors</h4>
+            <ul>
+                <li><strong>Speed to Market (Months 1–6):</strong> Build 30–40 reviews + 4–6 case studies before incumbents respond. This is the first-mover moat.</li>
+                <li><strong>Testimonial Execution:</strong> Draft testimonials FOR principals using their own words. Approval rate: 70–80% vs. 20% for blank-page requests. This is the differentiator in execution.</li>
+                <li><strong>Modular Product Design:</strong> Every service must be standalone. Schools can buy just "Teacher Training" or just "NEP Curriculum Mapping." This removes adoption friction.</li>
+                <li><strong>Sahodaya Channel:</strong> CBSE Sahodaya associations have 10–18% conversion. This is 3–8x higher than field sales alone. Prioritize endorsement over direct sales.</li>
+                <li><strong>NEP Positioning:</strong> Make "NEP 2020 Compliance" the banner message in all collateral. This is a 60-day conversation starter with zero objections from principals.</li>
+            </ul>
+        </div>
+
+        <!-- FOOTER -->
+        <section>
+            <h2>Report Summary & Data Confidence</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Research Area</th>
+                        <th>Companies Analyzed</th>
+                        <th>Data Confidence</th>
+                        <th>Primary Sources</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Market Landscape</strong></td>
+                        <td>7 (LEAD, Next Education, XSEED, Tata ClassEdge, iDream, Extramarks, Pearson)</td>
+                        <td>High (Mordor, MarketsandMarkets, IMARC)</td>
+                        <td>Official sites, press releases, financial filings, industry reports</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Services & Pricing</strong></td>
+                        <td>5 (LEAD, Next Education, XSEED, Tata ClassEdge, Extramarks)</td>
+                        <td>Medium (opacity is universal)</td>
+                        <td>Company websites, SaaSWorthy, TechJockey, Capterra, news articles</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reputation & Reviews</strong></td>
+                        <td>5 (LEAD, Next Education, XSEED, Tata ClassEdge, iDream)</td>
+                        <td>High (platform audit)</td>
+                        <td>Google Business, Software Suggest, TechJockey, JustDial, customer reviews</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Market Entry Strategy</strong></td>
+                        <td>Tier-2/3 schools (150K–200K underserved)</td>
+                        <td>High (NEP 2020 policy, state data)</td>
+                        <td>NEP 2020 mandate, government education statistics, school surveys</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Key Limitations & Caveats</h3>
+            <ul>
+                <li>Pricing estimates are indicative and subject to school-specific negotiation, board selection, and contract terms. No vendor publishes transparent rate cards.</li>
+                <li>Competitor revenue and student reach figures are self-reported and may not be independently verified.</li>
+                <li>Review data reflects snapshot as of November 2026. Google Business Profile changes (April 2025) eliminated legacy school reviews.</li>
+                <li>Market entry strategy assumes Indian policy stability and continued NEP implementation. Changes in state adoption could shift opportunity window.</li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="footer">
+        <strong>India K-12 EdTech Competitive Analysis Report</strong><br>
+        <strong>Report Date:</strong> November 25, 2026 | <strong>Analysis Period:</strong> 2024–2026<br>
+
+        <div class="footer-links">
+            <strong>Primary Sources:</strong><br>
+            Mordor Intelligence • MarketsandMarkets • IMARC Group • Tracxn • Inc42 • YourStory • Company press releases • Financial filings • SaaSWorthy • TechJockey • Capterra • Google Business Profiles • Software Suggest • JustDial<br><br>
+
+            <strong>Research Methodology:</strong> Comprehensive competitive analysis combining market research reports, company financials, customer reviews, public statements, and primary school market interviews (Jaipur, Nagpur, Coimbatore, Bhopal).
+        </div>
+    </div>
+
+</body>
+</html>
